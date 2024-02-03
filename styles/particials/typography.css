@@ -1,0 +1,83 @@
+.page-header, .section-header {
+  font-family: "Avenir Next LT Pro";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .page-header, .section-header {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.section-header {
+  color: #282828;
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-header {
+    padding-top: 3rem;
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.subheader {
+  font-family: "Avenir Next LT Pro";
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #282828;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .subheader {
+    padding-top: 2.25rem;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.body-copy, .footer-copy {
+  font-family: "Avenir Next LT Pro";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #282828;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .body-copy, .footer-copy {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 2.25rem;
+  }
+}
+
+.footer-copy {
+  color: #ffffff;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-copy {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 2.25rem;
+  }
+}
+
+.labels-and-buttons {
+  font-family: "Avenir Next LT Pro";
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #282828;
+}
+@media (min-width: 768px) {
+  .labels-and-buttons {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}/*# sourceMappingURL=typography.css.map */

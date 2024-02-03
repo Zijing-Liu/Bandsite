@@ -1,0 +1,76 @@
+@use "./colors.scss" as *;
+@use "./paddings-margins.scss" as *;
+@use "./breakpoints.scss" as *;
+// variables purely for styling purposes
+// default typography, used for mobile ui
+.page-header {
+  font-family: "Avenir Next LT Pro";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: $White;
+  @include tablet {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.section-header {
+  @extend .page-header;
+  color: $BandSite-Black;
+  padding-top: $padding-before-headline;
+  @include tablet {
+    padding-top: $padding-before-headline-large;
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.subheader {
+  font-family: "Avenir Next LT Pro";
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: $BandSite-Black;
+  padding-top: $padding;
+  @include tablet {
+    padding-top: $padding-large;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+.body-copy {
+  font-family: "Avenir Next LT Pro";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: $BandSite-Black;
+  padding-top: $padding;
+  @include tablet {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: $padding-large;
+  }
+}
+.footer-copy {
+  @extend .body-copy;
+  color: $White;
+  padding-top: $padding;
+  @include tablet {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: $padding-large;
+  }
+}
+
+.labels-and-buttons {
+  font-family: "Avenir Next LT Pro";
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  color: $BandSite-Black;
+  @include tablet {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

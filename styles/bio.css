@@ -1,0 +1,347 @@
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+} 
+.page-header, .hero-text, .nav-heading, .section-header, .copyright__title, .footer__heading, .about__heading, .gallery__title {
+  font-family: "Avenir Next LT Pro";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .page-header, .hero-text, .nav-heading, .section-header, .copyright__title, .footer__heading, .about__heading, .gallery__title {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.section-header, .copyright__title, .footer__heading, .about__heading, .gallery__title {
+  color: #282828;
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-header, .copyright__title, .footer__heading, .about__heading, .gallery__title {
+    padding-top: 3rem;
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.subheader, .about__band-name, .about__quotes, .about__photo, .nav-item {
+  font-family: "Avenir Next LT Pro";
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #282828;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .subheader, .about__band-name, .about__quotes, .about__photo, .nav-item {
+    padding-top: 2.25rem;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.body-copy, .about__item, .footer-copy, .copyright__text, .contact__text, .social {
+  font-family: "Avenir Next LT Pro";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #282828;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .body-copy, .about__item, .footer-copy, .copyright__text, .contact__text, .social {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 2.25rem;
+  }
+}
+
+.footer-copy, .copyright__text, .contact__text, .social {
+  color: #ffffff;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-copy, .copyright__text, .contact__text, .social {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 2.25rem;
+  }
+}
+
+.labels-and-buttons {
+  font-family: "Avenir Next LT Pro";
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #282828;
+}
+@media (min-width: 768px) {
+  .labels-and-buttons {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+header {
+  margin: 0;
+  background-color: #282828;
+  width: 100vw;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .nav {
+    flex-direction: row;
+    justify-self: flex-start;
+    align-items: baseline;
+  }
+}
+
+.nav-heading {
+  width: 7.5rem;
+  padding-top: 1rem;
+}
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+@media (min-width: 768px) {
+  .nav-list {
+    justify-content: flex-start;
+  }
+}
+
+.nav-item {
+  color: #e1e1e1;
+  font-weight: 400;
+  text-align: center;
+  padding-bottom: 1rem;
+  text-decoration: none;
+  flex-grow: 1;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+@media (min-width: 768px) {
+  .nav-item {
+    padding-right: 24px;
+    flex-grow: 0;
+  }
+}
+
+.nav-item:hover {
+  color: #ffffff;
+  border-bottom: thick #ffffff solid;
+}
+
+.nav-item:active {
+  font-weight: 700;
+}
+
+.hero {
+  height: 40vh;
+  position: relative;
+  background-image: url("/assets/Images/hero-bio.jpg");
+  background-size: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+  margin-top: -1rem;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+  margin: 0px 1rem;
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .about {
+    margin: 0px 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+.about__heading, .gallery__title {
+  text-align: left;
+}
+.about__photo {
+  width: 100%;
+  align-items: center;
+}
+.about__quotes {
+  font-weight: 700;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .about__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 768px) {
+  .about__item {
+    flex: inline;
+    width: 40%;
+  }
+}
+
+.gallery {
+  background-color: #fafafa;
+}
+.gallery__title {
+  margin: 0px 2.25rem;
+}
+@media (min-width: 768px) {
+  .gallery__title {
+    margin: 0px 2.25rem;
+  }
+}
+.gallery__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin: 0px 1rem;
+}
+@media (min-width: 768px) {
+  .gallery__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2.25rem;
+    justify-content: center;
+    margin: 0px 2.25rem;
+    padding-bottom: 2.25rem;
+  }
+}
+.gallery__title {
+  margin: 0px 1rem;
+}
+.gallery__item {
+  width: 100%;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .gallery__item {
+    width: 30%;
+  }
+}
+
+.footer {
+  background-color: #282828;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-bottom: 1rem;
+}
+.footer__heading {
+  color: #ffffff;
+  text-align: left;
+  margin: 0px 1rem;
+}
+@media (min-width: 768px) {
+  .footer__heading {
+    margin: 0px 2.25rem;
+  }
+}
+
+.social {
+  margin: 0px 1rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .social {
+    margin: 0px 2.25rem;
+  }
+}
+
+.social-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.contact-list {
+  padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .contact-list {
+    padding-bottom: 2.25rem;
+  }
+}
+
+.contact {
+  margin: 0px 1rem;
+}
+.contact__text--bold {
+  font-weight: 700;
+}
+@media (min-width: 768px) {
+  .contact {
+    margin: 0px 2.25rem;
+  }
+}
+
+.copyright__title {
+  margin: 0px 1rem;
+  color: #ffffff;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .copyright__title {
+    margin: 0px 2.25rem;
+  }
+}
+
+.copyright__text {
+  margin: 0px 1rem;
+  text-align: left;
+}
+@media (min-width: 768px) {
+  .copyright__text {
+    margin: 0px 2.25rem;
+  }
+}/*# sourceMappingURL=bio.css.map */
