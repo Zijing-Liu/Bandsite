@@ -33,6 +33,7 @@ header {
   @extend .page-header;
   width: 7.5rem;
   padding-top: $padding;
+  text-decoration: none;
   @include tablet {
     display: none;
   }
@@ -41,15 +42,20 @@ header {
 .nav-logo--inline {
   display: none;
   @extend .subheader;
+  font-weight: 400;
   color: $White;
 
   @include tablet {
     display: inline-block;
     width: 120px;
     text-decoration: none;
-    margin: 0 $page-margin--tablet;
+    margin-left: $page-margin--tablet;
     padding-bottom: $padding-large;
     padding-right: $padding-large;
+  }
+
+  @include desktop {
+    margin-left: $page-margin--desktop;
   }
 }
 
@@ -95,6 +101,9 @@ header {
   background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
   background-blend-mode: multiply;
+  @include desktop {
+    height: 90vh;
+  }
 }
 
 .hero-text {
@@ -107,6 +116,9 @@ header {
   @include tablet {
     padding-left: $page-margin--tablet;
   }
+  @include desktop {
+    padding-left: $page-margin--desktop;
+  }
 }
 
 body {
@@ -115,19 +127,25 @@ body {
 }
 .about {
   padding-bottom: $padding;
+  margin: 0 $page-margin;
+  @include tablet {
+    margin: 0 $page-margin--tablet;
+  }
+  @include desktop {
+    margin: 0 $page-margin--desktop;
+  }
 
   &__heading {
     @extend .section-header;
     text-align: left;
-    @include tablet {
-      margin: 0 $page-margin--tablet;
-    }
   }
   &__content {
     @include tablet {
-      margin: 0px $page-margin--tablet;
       padding: 0px $page-margin--tablet;
       padding-bottom: $padding-large;
+    }
+    @include desktop {
+      padding: 0px $page-margin--desktop;
     }
   }
   &__photo {
@@ -170,12 +188,6 @@ body {
 
 .gallery {
   background-color: $Alabaster;
-  &__title {
-    margin: 0px $page-margin;
-    @include tablet {
-      margin: 0px $page-margin--tablet;
-    }
-  }
   &__list {
     display: flex;
     flex-direction: column;
@@ -193,6 +205,9 @@ body {
       padding-bottom: $padding-large;
       margin: 0px $page-margin--tablet;
     }
+    @include desktop {
+      margin: 0 $page-margin--desktop;
+    }
   }
   &__title {
     @extend .about__heading;
@@ -200,6 +215,9 @@ body {
     @include tablet {
       padding-bottom: $padding-large;
       margin: 0px $page-margin--tablet;
+    }
+    @include desktop {
+      margin: 0 $page-margin--desktop;
     }
   }
   &__item {
@@ -234,9 +252,9 @@ body {
       display: inline-block;
       margin: 0px $page-margin--tablet;
     }
-    // @include desktop {
-    //   margin: 0px $page-margin--desktop;
-    // }
+    @include desktop {
+      margin: 0px $page-margin--desktop;
+    }
   }
 }
 
@@ -248,7 +266,7 @@ body {
   gap: $padding;
   padding-top: $padding;
   @include tablet {
-    // margin: 0px $page-margin--tablet;
+    margin: 0;
     display: inline-block;
   }
 }
@@ -262,27 +280,31 @@ body {
 .contact-list {
   padding-bottom: $padding;
   @include tablet {
-    padding-bottom: $padding-large;
-  }
-}
-.contact-list {
-  @include tablet {
     display: flex;
     justify-content: flex-start;
+    padding-bottom: $padding-large;
+    margin: 0 $page-margin--tablet;
+  }
+  @include desktop {
+    margin: 0 $page-margin--desktop;
   }
 }
+
 .contact {
+  width: 215px;
+  padding-left: $padding;
   @include tablet {
+    padding-left: 0;
+    padding-right: $page-margin--tablet;
+  }
+  @include desktop {
+    padding-right: $page-margin--desktop;
   }
   &__text {
     @extend .footer-copy;
     &--bold {
       font-weight: 700;
     }
-  }
-  margin: 0px $page-margin;
-  @include tablet {
-    margin: 0px $page-margin--tablet;
   }
 }
 
@@ -293,7 +315,6 @@ body {
   text-align: left;
   @include tablet {
     display: none;
-    margin: 0px $page-margin--tablet;
   }
 
   &--upper {
@@ -308,6 +329,9 @@ body {
       color: $White;
       right: $page-margin--tablet;
     }
+    @include desktop {
+      right: $page-margin--desktop;
+    }
   }
 }
 .copyright__text {
@@ -316,5 +340,8 @@ body {
   text-align: left;
   @include tablet {
     margin: 0px $page-margin--tablet;
+  }
+  @include desktop {
+    margin: 0 $page-margin--desktop;
   }
 }
