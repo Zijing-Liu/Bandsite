@@ -29,16 +29,35 @@ header {
     align-items: baseline;
   }
 }
-.nav-heading {
+.nav-logo {
   @extend .page-header;
   width: 7.5rem;
   padding-top: $padding;
+  @include tablet {
+    display: none;
+  }
+}
+
+.nav-logo--inline {
+  display: none;
+  @extend .subheader;
+  color: $White;
+
+  @include tablet {
+    display: inline-block;
+    width: 120px;
+    text-decoration: none;
+    margin: 0 $page-margin--tablet;
+    padding-bottom: $padding-large;
+    padding-right: $padding-large;
+  }
 }
 
 .nav-list {
   width: 100%;
   display: flex;
   flex-direction: row;
+  align-items: center;
   @include tablet {
     justify-content: flex-start;
   }
@@ -49,14 +68,17 @@ header {
   color: $Mercury;
   font-weight: 400; // font-weight for inactivate nav-item
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: $padding;
   text-decoration: none;
   flex-grow: 1;
   border: none;
   cursor: pointer;
   transition: color 0.3s ease;
   @include tablet {
-    padding-right: 24px;
+    font-size: 14px;
+    line-height: 22px;
+    display: inline-block;
+    padding: $padding-large;
     flex-grow: 0;
   }
 }
@@ -73,14 +95,21 @@ header {
   background-image: url("/assets/Images/hero-bio.jpg");
   background-size: cover;
 }
+hero::before {
+  background-color: $BandSite-Black;
+  opacity: 50%;
+}
 
 .hero-text {
   @extend .page-header;
+  color: white;
   position: absolute;
   top: 50%;
-  left: 1rem;
-  margin-top: -1rem;
-  padding: 0;
+  transform: translate(0, -50%);
+  padding-left: $page-margin;
+  @include tablet {
+    padding-left: $page-margin--tablet;
+  }
 }
 
 body {
@@ -88,16 +117,21 @@ body {
   padding: 0;
 }
 .about {
-  margin: 0px $page-margin;
-  @include tablet {
-    margin: 0px $page-margin--tablet;
-    padding-bottom: $padding-large;
-  }
   padding-bottom: $padding;
 
   &__heading {
     @extend .section-header;
     text-align: left;
+    @include tablet {
+      margin: 0 $page-margin--tablet;
+    }
+  }
+  &__content {
+    @include tablet {
+      margin: 0px $page-margin--tablet;
+      padding: 0px $page-margin--tablet;
+      padding-bottom: $padding-large;
+    }
   }
   &__photo {
     @extend .subheader;
@@ -107,12 +141,17 @@ body {
 
   &__quotes {
     @extend .subheader;
-    font-weight: 700;
+    font-weight: 600;
     text-align: left;
+    &--origin {
+      @extend .body-copy;
+      font-weight: 600;
+    }
   }
 
   &__band-name {
     @extend .subheader;
+    padding-top: $padding-before-headline-large;
   }
   &__list {
     @include tablet {
@@ -120,13 +159,14 @@ body {
       flex-direction: row;
       justify-content: center;
       justify-content: space-between;
+      gap: $padding-large;
     }
   }
   &__item {
     @extend .body-copy;
     @include tablet {
       flex: inline;
-      width: 40%;
+      width: 50%;
     }
   }
 }
@@ -134,7 +174,7 @@ body {
 .gallery {
   background-color: $Alabaster;
   &__title {
-    margin: 0px $page-margin--tablet;
+    margin: 0px $page-margin;
     @include tablet {
       margin: 0px $page-margin--tablet;
     }
@@ -149,16 +189,21 @@ body {
 
     @include tablet {
       flex-direction: row;
+      column-count: 3;
+      gap: $padding-large;
       flex-wrap: wrap;
-      gap: $page-margin--tablet;
-      justify-content: center;
-      margin: 0px $page-margin--tablet;
+      justify-content: space-between;
       padding-bottom: $padding-large;
+      margin: 0px $page-margin--tablet;
     }
   }
   &__title {
     @extend .about__heading;
     margin: 0px $page-margin;
+    @include tablet {
+      padding-bottom: $padding-large;
+      margin: 0px $page-margin--tablet;
+    }
   }
   &__item {
     width: 100%;
@@ -166,6 +211,13 @@ body {
     @include tablet {
       width: 30%;
     }
+  }
+}
+
+.footer_headings {
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
   }
 }
 
@@ -182,6 +234,7 @@ body {
     text-align: left;
     margin: 0px $page-margin;
     @include tablet {
+      display: inline-block;
       margin: 0px $page-margin--tablet;
     }
     // @include desktop {
@@ -189,6 +242,7 @@ body {
     // }
   }
 }
+
 .social {
   @extend .footer-copy;
   margin: 0px $page-margin;
@@ -197,12 +251,16 @@ body {
   gap: $padding;
   padding-top: $padding;
   @include tablet {
-    margin: 0px $page-margin--tablet;
+    // margin: 0px $page-margin--tablet;
+    display: inline-block;
   }
 }
 .social-icon {
   width: 24px;
   height: 24px;
+  @include tablet {
+    padding-right: $padding-large;
+  }
 }
 .contact-list {
   padding-bottom: $padding;
@@ -210,8 +268,15 @@ body {
     padding-bottom: $padding-large;
   }
 }
-
+.contact-list {
+  @include tablet {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
 .contact {
+  @include tablet {
+  }
   &__text {
     @extend .footer-copy;
     &--bold {
@@ -224,13 +289,28 @@ body {
   }
 }
 
-.copyright__title {
+.footer__logo {
   margin: 0px $page-margin;
   @extend .section-header;
   color: $White;
   text-align: left;
   @include tablet {
+    display: none;
     margin: 0px $page-margin--tablet;
+  }
+
+  &--upper {
+    @extend .subheader;
+    font-weight: 400;
+    display: none;
+    @include tablet {
+      display: inline-block;
+      position: absolute;
+      padding-top: $padding-before-headline-large;
+      padding-right: 36px;
+      color: $White;
+      right: $page-margin--tablet;
+    }
   }
 }
 .copyright__text {
