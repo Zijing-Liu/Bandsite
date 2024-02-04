@@ -197,13 +197,9 @@ header {
 .hero {
   height: 40vh;
   position: relative;
-  background-image: url("/assets/Images/hero-bio.jpg");
+  background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
-}
-
-hero::before {
-  background-color: #282828;
-  opacity: 50%;
+  background-blend-mode: multiply;
 }
 
 .hero-text {
