@@ -12,6 +12,9 @@ h3,
 p {
   margin: 0;
 }
+a {
+  text-decoration: none;
+}
 // header
 header {
   // position: fixed; // how to make the header fixed while not exceed
@@ -313,6 +316,7 @@ body {
   @extend .section-header;
   color: $White;
   text-align: left;
+  text-decoration: none;
   @include tablet {
     display: none;
   }
@@ -343,5 +347,70 @@ body {
   }
   @include desktop {
     margin: 0 $page-margin--desktop;
+  }
+}
+form {
+}
+form #input {
+  width: 100%;
+  border: $Mercury 1px;
+  border-radius: 10px;
+}
+
+// styling for the comment section
+.conversation {
+  display: flex;
+  gap: 8px;
+}
+.comments {
+  @extend .body-copy;
+
+  margin: 0px $page-margin;
+  @include tablet {
+    margin: 0px $page-margin--tablet;
+  }
+  @include desktop {
+    margin: 0 $page-margin--desktop;
+  }
+}
+.comment-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__name {
+    font-weight: 700;
+  }
+  &__date {
+    color: $Mercury;
+  }
+  &__text {
+    padding-bottom: 8px;
+  }
+  &__rightColumn {
+    margin-top: 8px;
+  }
+}
+
+hr {
+  width: 100%;
+  color: $Mercury;
+  stroke: $Mercury;
+  stroke-width: 1px;
+}
+
+.avatar {
+  margin-top: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: $Mercury;
+  flex-shrink: 0;
+  &--filled {
+    background-image: url("../assets/Images/Mohan-muruge.jpg");
   }
 }

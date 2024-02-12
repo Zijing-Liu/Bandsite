@@ -1,0 +1,10 @@
+.hero {
+  height: 40vh;
+  position: relative;
+  background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
+  background-size: cover;
+  background-blend-mode: multiply;
+  @include desktop {
+    height: 90vh;
+  }
+}

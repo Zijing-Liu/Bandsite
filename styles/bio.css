@@ -58,7 +58,7 @@
   }
 }
 
-.body-copy, .about__item, .about__quotes--origin, .footer-copy, .copyright__text, .contact__text, .social {
+.body-copy, .comments, .about__item, .about__quotes--origin, .footer-copy, .copyright__text, .contact__text, .social {
   font-family: "Avenir Next LT Pro";
   font-size: 13px;
   line-height: 18px;
@@ -67,7 +67,7 @@
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .body-copy, .about__item, .about__quotes--origin, .footer-copy, .copyright__text, .contact__text, .social {
+  .body-copy, .comments, .about__item, .about__quotes--origin, .footer-copy, .copyright__text, .contact__text, .social {
     font-size: 14px;
     line-height: 22px;
     padding-top: 24px;
@@ -106,6 +106,10 @@ h2,
 h3,
 p {
   margin: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 header {
@@ -442,6 +446,7 @@ body {
   margin: 0px 1rem;
   color: #ffffff;
   text-align: left;
+  text-decoration: none;
 }
 @media (min-width: 768px) {
   .footer__logo {
@@ -481,4 +486,70 @@ body {
   .copyright__text {
     margin: 0 82px;
   }
+}
+
+form #input {
+  width: 100%;
+  border: #e1e1e1 1px;
+  border-radius: 10px;
+}
+
+.conversation {
+  display: flex;
+  gap: 8px;
+}
+
+.comments {
+  margin: 0px 1rem;
+}
+@media (min-width: 768px) {
+  .comments {
+    margin: 0px 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments {
+    margin: 0 82px;
+  }
+}
+
+.comment-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+.comment-item__title {
+  display: flex;
+  justify-content: space-between;
+}
+.comment-item__name {
+  font-weight: 700;
+}
+.comment-item__date {
+  color: #e1e1e1;
+}
+.comment-item__text {
+  padding-bottom: 8px;
+}
+.comment-item__rightColumn {
+  margin-top: 8px;
+}
+
+hr {
+  width: 100%;
+  color: #e1e1e1;
+  stroke: #e1e1e1;
+  stroke-width: 1px;
+}
+
+.avatar {
+  margin-top: 8px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #e1e1e1;
+  flex-shrink: 0;
+}
+.avatar--filled {
+  background-image: url("../assets/Images/Mohan-muruge.jpg");
 }/*# sourceMappingURL=bio.css.map */

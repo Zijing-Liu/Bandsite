@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Shows</title>
     <link rel="stylesheet" href="./styles/bio.css" />
   </head>
   <body>
@@ -12,8 +12,8 @@
         <a class="nav-logo" href="index.html">BANDSITE</a>
         <div class="nav-list">
           <a class="nav-logo--inline" href="index.html">BANDSITE</a>
-          <a class="nav-item" href="">Biography</a>
-          <a class="nav-item" href="">Shows</a>
+          <a class="nav-item" href="index.html">Biography</a>
+          <a class="nav-item" href="./pages/shows.html">Shows</a>
         </div>
       </div>
       <div class="hero">
@@ -22,9 +22,13 @@
     </header>
     <main>
       <section class="about">
-        <h1 class="about__heading">About the Musicians</h1>
+        <h2 class="about__heading">About the Musicians</h2>
         <div class="about__content">
-          <img class="about__photo" src="./assets/Images/band.jpg" alt="band" />
+          <img
+            class="about__photo"
+            src="./assets/Images/band.jpg"
+            alt="image of the band"
+          />
           <p class="about__quotes">
             “We push each other to be the best. It’s not uncommon for one of us
             to say ‘this needs to be better, back to the drawing board’”
@@ -58,7 +62,7 @@
         </div>
       </section>
       <section class="gallery">
-        <h1 class="gallery__title">Photo Gallery</h1>
+        <h2 class="gallery__title">Photo Gallery</h2>
         <div class="gallery__list">
           <img
             class="gallery__item"
@@ -107,6 +111,34 @@
           />
         </div>
       </section>
+      <section class="comments">
+        <h2 class="Join the Conversation"></h2>
+        <div class="conversation">
+          <div class="avatar avatar--filled"></div>
+          <form class="add-comments" action="POST">
+            <label for="user-name">NAME</label><br />
+            <input
+              class="add-comments__input"
+              type="text"
+              name=""
+              id="user-name"
+            /><br />
+            <label for="user-comment">COMMENT</label><br />
+            <input
+              class="add-comments__input"
+              type="text"
+              name=""
+              id="user-comment"
+            />
+            <br />
+            <button class="add-comments-button">COMMENT</button>
+          </form>
+        </div>
+
+        <div class="comment-list" id="comment-list">
+          <script src="scripts/index-page.js"></script>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__headings">
@@ -115,16 +147,16 @@
           <a class="social-icon" href="">
             <img
               src="./assets/Icons/SVG/Icon-instagram.svg"
-              alt="Icon-instagram"
+              alt="instagram icon"
           /></a>
           <a class="social-icon" href="">
-            <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="Icon-facebook"
+            <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="facebook icon"
           /></a>
           <a class="social-icon" href="">
-            <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="Icon-twitter" />
+            <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="twitter icon" />
           </a>
         </div>
-        <div class="footer__logo--upper">BANDSITE</div>
+        <a href="index.html" class="footer__logo--upper">BANDSITE</a>
       </div>
       <div class="contact-list">
         <div class="contact">
@@ -156,7 +188,8 @@
           <p class="contact__text">bookings@archentertainment.com</p>
         </div>
       </div>
-      <h1 class="footer__logo">BANDSITE</h1>
+      <a class="footer__logo" href="index.html">BANDSITE</a>
+
       <p class="copyright__text">
         Copyright The Bees Knees © 2023 All Rights Reserved
       </p>
