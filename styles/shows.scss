@@ -1,3 +1,9 @@
+@use "./particials/breakpoints.scss" as *;
+@use "./particials/colors.scss" as *;
+@use "./particials/font-face.css" as *;
+@use "./particials/paddings-margins.scss" as *;
+@use "./particials/typography.scss" as *;
+
 .hero {
   height: 40vh;
   position: relative;
@@ -7,4 +13,31 @@
   @include desktop {
     height: 90vh;
   }
+}
+.show-item {
+  margin-top: $padding;
+  margin-bottom: $padding;
+}
+.label {
+  margin: 0, $padding;
+  @extend .body-copy;
+  color: $Silver;
+}
+.content {
+  margin: 0, $padding;
+  @extend .body-copy;
+  color: $BandSite-Black;
+
+  &--bold {
+    font-weight: bold;
+  }
+}
+
+.button {
+  @extend .labels-and-buttons;
+  color: $White;
+  height: 40px;
+  width: 100%;
+  background-color: $BandSite-Black;
+  border-radius: 4px;
 }

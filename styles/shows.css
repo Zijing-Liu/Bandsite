@@ -1,1 +1,140 @@
-/*# sourceMappingURL=shows.css.map */
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir Next LT Pro";
+  src: url("../../assets/Font/AvenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+} 
+.page-header, .section-header {
+  font-family: "Avenir Next LT Pro";
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: #ffffff;
+}
+@media (min-width: 768px) {
+  .page-header, .section-header {
+    font-size: 60px;
+    line-height: 68px;
+  }
+}
+
+.section-header {
+  color: #282828;
+  padding-top: 1.5rem;
+}
+@media (min-width: 768px) {
+  .section-header {
+    padding-top: 3rem;
+    font-size: 36px;
+    line-height: 44px;
+  }
+}
+
+.subheader {
+  font-family: "Avenir Next LT Pro";
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+  color: #282828;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .subheader {
+    padding-top: 24px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+.body-copy, .label, .content, .footer-copy {
+  font-family: "Avenir Next LT Pro";
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #282828;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .body-copy, .label, .content, .footer-copy {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 24px;
+  }
+}
+
+.footer-copy {
+  color: #ffffff;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .footer-copy {
+    font-size: 14px;
+    line-height: 20px;
+    padding-top: 24px;
+  }
+}
+
+.labels-and-buttons, .button {
+  font-family: "Avenir Next LT Pro";
+  font-size: 10px;
+  line-height: 20px;
+  font-weight: 700;
+  color: #282828;
+}
+@media (min-width: 768px) {
+  .labels-and-buttons, .button {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}
+
+.hero {
+  height: 40vh;
+  position: relative;
+  background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+@media (min-width: 1280px) {
+  .hero {
+    height: 90vh;
+  }
+}
+
+.show-item {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.label {
+  margin: 0, 1rem;
+  color: #afafaf;
+}
+
+.content {
+  margin: 0, 1rem;
+  color: #282828;
+}
+.content--bold {
+  font-weight: bold;
+}
+
+.button {
+  color: #ffffff;
+  height: 40px;
+  width: 100%;
+  background-color: #282828;
+  border-radius: 4px;
+}/*# sourceMappingURL=shows.css.map */

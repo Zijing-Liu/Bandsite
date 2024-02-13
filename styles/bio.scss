@@ -2,7 +2,7 @@
 @use "./particials/colors.scss" as *;
 @use "./particials/font-face.css" as *;
 @use "./particials/paddings-margins.scss" as *;
-@import "./particials/typography.scss";
+@use "./particials/typography.scss" as *;
 
 // reset the default margin
 body,

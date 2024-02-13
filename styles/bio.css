@@ -16,7 +16,7 @@
   font-weight: 700;
   font-style: normal;
 } 
-.page-header, .hero-text, .nav-logo, .section-header, .footer__logo, .footer__heading, .about__heading, .gallery__title {
+.page-header, .nav-logo, .hero-text, .section-header, .about__heading, .gallery__title, .footer__heading, .footer__logo {
   font-family: "Avenir Next LT Pro";
   font-size: 24px;
   line-height: 32px;
@@ -24,25 +24,25 @@
   color: #ffffff;
 }
 @media (min-width: 768px) {
-  .page-header, .hero-text, .nav-logo, .section-header, .footer__logo, .footer__heading, .about__heading, .gallery__title {
+  .page-header, .nav-logo, .hero-text, .section-header, .about__heading, .gallery__title, .footer__heading, .footer__logo {
     font-size: 60px;
     line-height: 68px;
   }
 }
 
-.section-header, .footer__logo, .footer__heading, .about__heading, .gallery__title {
+.section-header, .about__heading, .gallery__title, .footer__heading, .footer__logo {
   color: #282828;
   padding-top: 1.5rem;
 }
 @media (min-width: 768px) {
-  .section-header, .footer__logo, .footer__heading, .about__heading, .gallery__title {
+  .section-header, .about__heading, .gallery__title, .footer__heading, .footer__logo {
     padding-top: 3rem;
     font-size: 36px;
     line-height: 44px;
   }
 }
 
-.subheader, .footer__logo--upper, .about__band-name, .about__quotes, .about__photo, .nav-item, .nav-logo--inline {
+.subheader, .nav-logo--inline, .nav-item, .about__photo, .about__quotes, .about__band-name, .footer__logo--upper {
   font-family: "Avenir Next LT Pro";
   font-size: 14px;
   line-height: 18px;
@@ -51,14 +51,14 @@
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .subheader, .footer__logo--upper, .about__band-name, .about__quotes, .about__photo, .nav-item, .nav-logo--inline {
+  .subheader, .nav-logo--inline, .nav-item, .about__photo, .about__quotes, .about__band-name, .footer__logo--upper {
     padding-top: 24px;
     font-size: 24px;
     line-height: 32px;
   }
 }
 
-.body-copy, .comments, .about__item, .about__quotes--origin, .footer-copy, .copyright__text, .contact__text, .social {
+.body-copy, .about__quotes--origin, .about__item, .comments, .footer-copy, .social, .contact__text, .copyright__text {
   font-family: "Avenir Next LT Pro";
   font-size: 13px;
   line-height: 18px;
@@ -67,19 +67,19 @@
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .body-copy, .comments, .about__item, .about__quotes--origin, .footer-copy, .copyright__text, .contact__text, .social {
+  .body-copy, .about__quotes--origin, .about__item, .comments, .footer-copy, .social, .contact__text, .copyright__text {
     font-size: 14px;
     line-height: 22px;
     padding-top: 24px;
   }
 }
 
-.footer-copy, .copyright__text, .contact__text, .social {
+.footer-copy, .social, .contact__text, .copyright__text {
   color: #ffffff;
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .footer-copy, .copyright__text, .contact__text, .social {
+  .footer-copy, .social, .contact__text, .copyright__text {
     font-size: 14px;
     line-height: 20px;
     padding-top: 24px;
