@@ -44,6 +44,11 @@
   }
 }
 
+iframe {
+  @include tablet {
+    width: 144px;
+  }
+}
 .shows {
   margin: 0rem $page-margin;
   margin-bottom: $page-margin;
@@ -86,11 +91,15 @@
       @extend .show__label;
       @include tablet {
         display: inline;
+        width: 20%;
       }
     }
   }
   &__content {
     color: $BandSite-Black;
+    @include tablet {
+      width: 20%;
+    }
     &--bold {
       font-weight: bold;
     }
@@ -100,7 +109,6 @@
     border-width: 1px;
     border-color: $Mercury;
     margin-top: $padding;
-
     flex-basis: 100%;
   }
 }
