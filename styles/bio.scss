@@ -366,7 +366,7 @@ body {
 }
 .form {
   &__name {
-    width: 100%;
+    width: -webkit-fill-available;
     min-height: 36px;
     border-radius: 4px;
     border-color: $Mercury;
@@ -376,7 +376,7 @@ body {
     }
   }
   &__comment {
-    width: 100%;
+    width: -webkit-fill-available;
     min-height: 36px;
     border-radius: 4px;
     border-color: $Mercury;

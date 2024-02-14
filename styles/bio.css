@@ -504,7 +504,7 @@ body {
 }
 
 .form__name {
-  width: 100%;
+  width: -webkit-fill-available;
   min-height: 36px;
   border-radius: 4px;
   border-color: #e1e1e1;
@@ -516,7 +516,7 @@ body {
   }
 }
 .form__comment {
-  width: 100%;
+  width: -webkit-fill-available;
   min-height: 36px;
   border-radius: 4px;
   border-color: #e1e1e1;
