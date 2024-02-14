@@ -34,18 +34,48 @@
 
 .shows {
   margin: 0rem $page-margin;
+  margin-bottom: $page-margin;
+  @include tablet {
+    margin: $page-margin--tablet;
+    margin-bottom: $page-margin--tablet;
+  }
   &__heading {
     @extend .section-header;
     padding-top: $padding-before-headline;
   }
-  margin-bottom: $page-margin;
 }
 .show {
   @extend .body-copy;
+  text-align: left;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  &__labels {
+    width: 100%;
+    display: none;
+    @include tablet {
+      display: inline-flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
   &__label {
     @extend .labels-and-buttons;
     font-weight: 400;
     color: $Silver;
+    @include tablet {
+      display: none; //individual labels will be hidden
+    }
+    &--persist {
+      @extend .show__label;
+      @include tablet {
+        display: inline;
+      }
+    }
   }
   &__content {
     color: $BandSite-Black;
@@ -58,6 +88,8 @@
     border-width: 1px;
     border-color: $Mercury;
     margin-top: $padding;
+
+    flex-basis: 100%;
   }
 }
 
@@ -72,5 +104,9 @@
   border-radius: 4px;
   @include tablet {
     max-width: 150px;
+  }
+  &--hidden {
+    @extend .primary-cta;
+    visibility: hidden;
   }
 }
