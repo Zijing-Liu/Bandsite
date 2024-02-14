@@ -104,7 +104,7 @@
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
-  background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
+  background: url("../assets/Images/hero-shows.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
   background-blend-mode: multiply;
 }
