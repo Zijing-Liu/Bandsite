@@ -115,24 +115,30 @@
         <h2 class="Join the Conversation"></h2>
         <div class="conversation">
           <div class="avatar avatar--filled"></div>
-          <form class="add-comments" action="POST">
-            <label for="user-name">NAME</label><br />
-            <input
-              class="add-comments__input"
-              type="text"
-              name=""
-              id="user-name"
-            /><br />
-            <label for="user-comment">COMMENT</label><br />
-            <input
-              class="add-comments__input"
-              type="text"
-              name=""
-              id="user-comment"
-            />
-            <br />
-            <button class="add-comments-button">COMMENT</button>
-          </form>
+          <div class="add-comments">
+            <form class="form" action="POST">
+              <label class="form__label" for="user-name">NAME</label><br />
+              <input
+                class="form__name"
+                type="text"
+                name=""
+                id="user-name"
+                placeholder="Enter your name"
+              /><br />
+              <label class="form__label--comment" for="user-comment"
+                >COMMENT</label
+              ><br />
+              <input
+                class="form__comment"
+                type="text"
+                name=""
+                id="user-comment"
+                placeholder="Add a new comment"
+              />
+              <br />
+            </form>
+            <button class="primary-cta">COMMENT</button>
+          </div>
         </div>
 
         <div class="comment-list" id="comment-list">

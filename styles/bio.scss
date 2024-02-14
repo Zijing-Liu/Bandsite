@@ -353,20 +353,67 @@ body {
   }
 }
 
-form #input {
-  width: 100%;
-  border: $Mercury 1px;
-  border-radius: 10px;
-}
-
 // styling for the comment section
 .conversation {
   display: flex;
   gap: 8px;
+  justify-content: space-between;
+}
+.add-comments {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.form {
+  &__name {
+    width: 100%;
+    min-height: 36px;
+    border-radius: 4px;
+    border-color: $Mercury;
+    border-style: solid;
+    @include tablet {
+      min-height: 48px;
+    }
+  }
+  &__comment {
+    width: 100%;
+    min-height: 36px;
+    border-radius: 4px;
+    border-color: $Mercury;
+    border-style: solid;
+    @include tablet {
+      min-height: 48px;
+    }
+  }
+  &__label {
+    @extend .labels-and-buttons;
+    color: $Mercury;
+    &--comment {
+      @extend .form__label;
+      margin-top: $padding;
+    }
+  }
+}
+
+.primary-cta {
+  @extend .labels-and-buttons;
+  font-size: 14px;
+  margin-top: $padding;
+  color: $White;
+  height: 40px;
+  width: 100%;
+  background-color: $BandSite-Black;
+  border-radius: 4px;
+  @include tablet {
+    max-width: 150px;
+  }
+  &--hidden {
+    @extend .primary-cta;
+    visibility: hidden;
+  }
 }
 .comments {
   @extend .body-copy;
-
   margin: 0px $page-margin;
   @include tablet {
     margin: 0px $page-margin--tablet;
@@ -414,5 +461,6 @@ hr {
   flex-shrink: 0;
   &--filled {
     background-image: url("../assets/Images/Mohan-muruge.jpg");
+    margin: $padding;
   }
 }
