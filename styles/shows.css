@@ -148,6 +148,12 @@
   }
 }
 
+@media (min-width: 768px) {
+  iframe {
+    width: 144px;
+  }
+}
+
 .shows {
   margin: 0rem 1rem;
   margin-bottom: 1rem;
@@ -197,10 +203,16 @@
 @media (min-width: 768px) {
   .show__label--persist {
     display: inline;
+    width: 20%;
   }
 }
 .show__content {
   color: #282828;
+}
+@media (min-width: 768px) {
+  .show__content {
+    width: 20%;
+  }
 }
 .show__content--bold {
   font-weight: bold;
