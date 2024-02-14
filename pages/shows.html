@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bio</title>
+    <script src="../scripts/build-shows-page.js" defer></script>
     <link rel="stylesheet" href="../styles/bio.css" />
     <link rel="stylesheet" href="../styles/shows.css" />
   </head>
@@ -18,61 +19,58 @@
         </div>
       </div>
       <div class="hero">
-        <h1 class="hero-text">The Bees Knees</h1>
+        <p class="hero__body">Beautiful Beasts Album</p>
+        <h2 class="hero__heading">Stripes of Yellow x For The Stings</h2>
+        <div class="hero__music">
+          <iframe
+            width="100%"
+            height="140"
+            scrolling="no"
+            frameborder="no"
+            allow="autoplay"
+            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1466156410&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"
+          ></iframe>
+          <div
+            style="
+              font-size: 10px;
+              color: #cccccc;
+              line-break: anywhere;
+              word-break: normal;
+              overflow: hidden;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              font-family: Interstate, Lucida Grande, Lucida Sans Unicode,
+                Lucida Sans, Garuda, Verdana, Tahoma, sans-serif;
+              font-weight: 100;
+            "
+          >
+            <a
+              href="https://soundcloud.com/ddosama"
+              title="DD Osama"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none"
+              >DD Osama</a
+            >
+            ·
+            <a
+              href="https://soundcloud.com/ddosama/os-lets-do-it-feat-nle-choppa"
+              title="Let&#x27;s Do It (feat. NLE Choppa &amp; Dee Play4Keeps)"
+              target="_blank"
+              style="color: #cccccc; text-decoration: none"
+              >Let&#x27;s Do It (feat. NLE Choppa &amp; Dee Play4Keeps)</a
+            >
+          </div>
+        </div>
       </div>
     </header>
-    <section class="show">
-      <h2 class="">Shows</h2>
-      <div class="show-item">
-        <p class="label">Date</p>
-        <p class="content content--bold">Mon Sept 09 2024</p>
-        <p class="label">VENUE</p>
-        <p class="content">Ronald Lane</p>
-        <p class="label">LOCATION</p>
-        <p class="content">San Francisco, CA</p>
-        <button>BUY TICKETS</button>
-      </div>
-      <div class="show-item">
-        <p class="label">Date</p>
-        <p class="content content--bold">Tue Sept 17 2024</p>
-        <p class="label">VENUE</p>
-        <p class="content">Pier 3 East</p>
-        <p class="label">LOCATION</p>
-        <p class="content">San Francisco, CA</p>
-        <button>BUY TICKETS</button>
-      </div>
-      <div class="show-item">
-        <p class="label">Date</p>
-        <p class="content content--bold">Sat Oct 12 2024</p>
-        <p class="label">VENUE</p>
-        <p class="content">View Lounge</p>
-        <p class="label">LOCATION</p>
-        <p class="content">San Francisco, CA</p>
-        <button>BUY TICKETS</button>
-      </div>
-      <div class="show-item">
-        <p class="label">Date</p>
-        <p class="content content--bold">Sat Nov 16 2024</p>
-        <p class="label">VENUE</p>
-        <p class="content">Hyatt Agency</p>
-        <p class="label">LOCATION</p>
-        <p class="content">San Francisco, CA</p>
-        <a class="button" href="">BUY TICKETS</a>
-      </div>
-      <div class="show-item">
-        <p class="label">Date</p>
-        <p class="content content--bold">Wed Dec 18 2024</p>
-        <p class="label">VENUE</p>
-        <p class="content">Press Club</p>
-        <p class="label">LOCATION</p>
-        <p class="content">San Francisco, CA</p>
-        <button>BUY TICKETS</button>
-      </div>
+    <section class="shows">
+      <h2 class="shows__heading">Shows</h2>
+      <div class="show-list"></div>
     </section>
 
     <footer class="footer">
       <div class="footer__headings">
-        <h1 class="footer__heading">Get in Touch</h1>
+        <h2 class="footer__heading">Get in Touch</h2>
         <div class="social">
           <a class="social-icon" href="">
             <img

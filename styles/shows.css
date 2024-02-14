@@ -16,7 +16,7 @@
   font-weight: 700;
   font-style: normal;
 } 
-.page-header, .section-header {
+.page-header, .section-header, .hero__heading, .shows__heading {
   font-family: "Avenir Next LT Pro";
   font-size: 24px;
   line-height: 32px;
@@ -24,18 +24,18 @@
   color: #ffffff;
 }
 @media (min-width: 768px) {
-  .page-header, .section-header {
+  .page-header, .section-header, .hero__heading, .shows__heading {
     font-size: 60px;
     line-height: 68px;
   }
 }
 
-.section-header {
+.section-header, .hero__heading, .shows__heading {
   color: #282828;
   padding-top: 1.5rem;
 }
 @media (min-width: 768px) {
-  .section-header {
+  .section-header, .hero__heading, .shows__heading {
     padding-top: 3rem;
     font-size: 36px;
     line-height: 44px;
@@ -58,7 +58,7 @@
   }
 }
 
-.body-copy, .label, .content, .footer-copy {
+.body-copy, .hero__body, .show, .footer-copy {
   font-family: "Avenir Next LT Pro";
   font-size: 13px;
   line-height: 18px;
@@ -67,7 +67,7 @@
   padding-top: 1rem;
 }
 @media (min-width: 768px) {
-  .body-copy, .label, .content, .footer-copy {
+  .body-copy, .hero__body, .show, .footer-copy {
     font-size: 14px;
     line-height: 22px;
     padding-top: 24px;
@@ -86,7 +86,7 @@
   }
 }
 
-.labels-and-buttons, .button {
+.labels-and-buttons, .show__label, .primary-cta {
   font-family: "Avenir Next LT Pro";
   font-size: 10px;
   line-height: 20px;
@@ -94,14 +94,15 @@
   color: #282828;
 }
 @media (min-width: 768px) {
-  .labels-and-buttons, .button {
+  .labels-and-buttons, .show__label, .primary-cta {
     font-size: 12px;
     line-height: 20px;
   }
 }
 
 .hero {
-  height: 40vh;
+  height: -moz-fit-content;
+  height: fit-content;
   position: relative;
   background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
@@ -112,29 +113,58 @@
     height: 90vh;
   }
 }
+.hero__body {
+  margin: 0rem 1rem;
+  padding-top: 1.5rem;
+  color: #ffffff;
+}
+.hero__heading {
+  width: 60%;
+  color: #ffffff;
+  margin: 0rem 1rem;
+  padding-top: 1.5rem;
+}
+.hero__music {
+  margin: 0 1rem;
+  padding: 1.5rem 0;
+}
 
-.show-item {
-  margin-top: 1rem;
+.shows {
+  margin: 0rem 1rem;
   margin-bottom: 1rem;
 }
+.shows__heading {
+  padding-top: 1.5rem;
+}
 
-.label {
-  margin: 0, 1rem;
+.show__label {
+  font-weight: 400;
   color: #afafaf;
 }
-
-.content {
-  margin: 0, 1rem;
+.show__content {
   color: #282828;
 }
-.content--bold {
+.show__content--bold {
   font-weight: bold;
 }
+.show__divider {
+  border-style: inset;
+  border-width: 1px;
+  border-color: #e1e1e1;
+  margin-top: 1rem;
+}
 
-.button {
+.primary-cta {
+  font-size: 14px;
+  margin-top: 1rem;
   color: #ffffff;
   height: 40px;
   width: 100%;
   background-color: #282828;
   border-radius: 4px;
+}
+@media (min-width: 768px) {
+  .primary-cta {
+    max-width: 150px;
+  }
 }/*# sourceMappingURL=shows.css.map */

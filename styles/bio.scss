@@ -34,6 +34,9 @@ header {
 }
 .nav-logo {
   @extend .page-header;
+  font-weight: 400;
+  color: $White;
+  text-align: center;
   width: 7.5rem;
   padding-top: $padding;
   text-decoration: none;

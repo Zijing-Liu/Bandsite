@@ -5,7 +5,7 @@
 @use "./particials/typography.scss" as *;
 
 .hero {
-  height: 40vh;
+  height: fit-content;
   position: relative;
   background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
@@ -13,31 +13,64 @@
   @include desktop {
     height: 90vh;
   }
-}
-.show-item {
-  margin-top: $padding;
-  margin-bottom: $padding;
-}
-.label {
-  margin: 0, $padding;
-  @extend .body-copy;
-  color: $Silver;
-}
-.content {
-  margin: 0, $padding;
-  @extend .body-copy;
-  color: $BandSite-Black;
-
-  &--bold {
-    font-weight: bold;
+  &__body {
+    @extend .body-copy;
+    margin: 0rem $page-margin;
+    padding-top: $padding-before-headline;
+    color: $White;
+  }
+  &__heading {
+    @extend .section-header;
+    width: 60%;
+    color: $White;
+    margin: 0rem $page-margin;
+    padding-top: $padding-before-headline;
+  }
+  &__music {
+    margin: 0 $page-margin;
+    padding: $padding-before-headline 0;
   }
 }
 
-.button {
+.shows {
+  margin: 0rem $page-margin;
+  &__heading {
+    @extend .section-header;
+    padding-top: $padding-before-headline;
+  }
+  margin-bottom: $page-margin;
+}
+.show {
+  @extend .body-copy;
+  &__label {
+    @extend .labels-and-buttons;
+    font-weight: 400;
+    color: $Silver;
+  }
+  &__content {
+    color: $BandSite-Black;
+    &--bold {
+      font-weight: bold;
+    }
+  }
+  &__divider {
+    border-style: inset;
+    border-width: 1px;
+    border-color: $Mercury;
+    margin-top: $padding;
+  }
+}
+
+.primary-cta {
   @extend .labels-and-buttons;
+  font-size: 14px;
+  margin-top: $padding;
   color: $White;
   height: 40px;
   width: 100%;
   background-color: $BandSite-Black;
   border-radius: 4px;
+  @include tablet {
+    max-width: 150px;
+  }
 }
