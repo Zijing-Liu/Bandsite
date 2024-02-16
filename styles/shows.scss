@@ -14,7 +14,7 @@
     height: fit-content;
   }
   &__body {
-    @extend .body-copy;
+    @include body-copy;
     margin: 0rem $page-margin;
     padding-top: $padding-before-headline;
     color: $White;
@@ -24,7 +24,7 @@
     }
   }
   &__heading {
-    @extend .section-header;
+    @include section-header;
     width: 60%;
     color: $White;
     margin: 0rem $page-margin;
@@ -57,12 +57,12 @@ iframe {
     margin-bottom: $page-margin--tablet;
   }
   &__heading {
-    @extend .section-header;
+    @include section-header;
     padding-top: $padding-before-headline;
   }
 }
 .show {
-  @extend .body-copy;
+  @include body-copy;
   text-align: left;
   @include tablet {
     display: flex;
@@ -81,7 +81,7 @@ iframe {
     }
   }
   &__label {
-    @extend .labels-and-buttons;
+    @include labels-and-buttons;
     font-weight: 400;
     color: $Silver;
     @include tablet {
@@ -114,7 +114,7 @@ iframe {
 }
 
 .primary-cta {
-  @extend .labels-and-buttons;
+  @include labels-and-buttons;
   font-size: 14px;
   margin-top: $padding;
   color: $White;

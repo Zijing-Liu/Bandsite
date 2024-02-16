@@ -33,7 +33,7 @@ header {
   }
 }
 .nav-logo {
-  @extend .page-header;
+  @include page-header;
   font-weight: 400;
   color: $White;
   text-align: center;
@@ -47,7 +47,7 @@ header {
 
 .nav-logo--inline {
   display: none;
-  @extend .subheader;
+  @include subheader;
   font-weight: 400;
   color: $White;
 
@@ -76,7 +76,7 @@ header {
 }
 
 .nav-item {
-  @extend .subheader;
+  @include subheader;
   color: $Mercury;
   font-weight: 400; // font-weight for inactivate nav-item
   text-align: center;
@@ -113,7 +113,7 @@ header {
 }
 
 .hero-text {
-  @extend .page-header;
+  @include page-header;
   color: white;
   position: absolute;
   top: 50%;
@@ -142,7 +142,7 @@ body {
   }
 
   &__heading {
-    @extend .section-header;
+    @include section-header;
     text-align: left;
   }
   &__content {
@@ -155,23 +155,23 @@ body {
     }
   }
   &__photo {
-    @extend .subheader;
+    @include subheader;
     width: 100%;
     align-items: center;
   }
 
   &__quotes {
-    @extend .subheader;
+    @include subheader;
     font-weight: 600;
     text-align: left;
     &--origin {
-      @extend .body-copy;
+      @include body-copy;
       font-weight: 600;
     }
   }
 
   &__band-name {
-    @extend .subheader;
+    @include subheader;
     padding-top: $padding-before-headline-large;
   }
   &__list {
@@ -184,7 +184,7 @@ body {
     }
   }
   &__item {
-    @extend .body-copy;
+    @include body-copy;
     @include tablet {
       flex: inline;
       width: 50%;
@@ -216,7 +216,7 @@ body {
     }
   }
   &__title {
-    @extend .about__heading;
+    @include about__heading;
     margin: 0px $page-margin;
     @include tablet {
       padding-bottom: $padding-large;
@@ -250,7 +250,7 @@ body {
   padding-bottom: $padding;
 
   &__heading {
-    @extend .section-header;
+    @include section-header;
     color: $White;
     text-align: left;
     margin: 0px $page-margin;
@@ -265,7 +265,7 @@ body {
 }
 
 .social {
-  @extend .footer-copy;
+  @include footer-copy;
   margin: 0px $page-margin;
   display: flex;
   justify-content: flex-start;
@@ -307,7 +307,7 @@ body {
     padding-right: $page-margin--desktop;
   }
   &__text {
-    @extend .footer-copy;
+    @include footer-copy;
     &--bold {
       font-weight: 700;
     }
@@ -316,7 +316,7 @@ body {
 
 .footer__logo {
   margin: 0px $page-margin;
-  @extend .section-header;
+  @include section-header;
   color: $White;
   text-align: left;
   text-decoration: none;
@@ -325,7 +325,7 @@ body {
   }
 
   &--upper {
-    @extend .subheader;
+    @include subheader;
     font-weight: 400;
     display: none;
     @include tablet {
@@ -343,7 +343,7 @@ body {
 }
 .copyright__text {
   margin: 0px $page-margin;
-  @extend .footer-copy;
+  @include footer-copy;
   text-align: left;
   @include tablet {
     margin: 0px $page-margin--tablet;
@@ -389,7 +389,7 @@ body {
     }
   }
   &__label {
-    @extend .labels-and-buttons;
+    @include labels-and-buttons;
     color: $Mercury;
     font-weight: 400;
     &--comment {
@@ -399,7 +399,7 @@ body {
 }
 
 .primary-cta {
-  @extend .labels-and-buttons;
+  @include labels-and-buttons;
   font-size: 14px;
   margin-top: $padding;
   color: $White;
@@ -416,7 +416,7 @@ body {
   }
 }
 .comments {
-  @extend .body-copy;
+  @include body-copy;
   margin: 0px $page-margin;
   @include tablet {
     margin: 0px $page-margin--tablet;
