@@ -16,7 +16,7 @@
 }
 
 @mixin section-header {
-  @extend .page-header;
+  @include page-header;
   color: $BandSite-Black;
   padding-top: $padding-before-headline;
   @include tablet {
@@ -39,7 +39,7 @@
     line-height: 32px;
   }
 }
-.body-copy {
+@mixin body-copy {
   font-family: "Avenir Next LT Pro";
   font-size: 13px;
   line-height: 18px;
@@ -52,8 +52,8 @@
     padding-top: $padding-large;
   }
 }
-.footer-copy {
-  @extend .body-copy;
+@mixin footer-copy {
+  @include body-copy;
   color: $White;
   padding-top: $padding;
   @include tablet {

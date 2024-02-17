@@ -1,8 +1,8 @@
-@use "./particials/breakpoints.scss" as *;
-@use "./particials/colors.scss" as *;
-@use "./particials/font-face.css" as *;
-@use "./particials/paddings-margins.scss" as *;
-@use "./particials/typography.scss" as *;
+@use "./particials/_breakpoints.scss" as *;
+@use "./particials/_colors.scss" as *;
+@use "./particials/font-face" as *;
+@use "./particials/_paddings-margins.scss" as *;
+@use "./particials/_typography" as *;
 
 // reset the default margin
 body,
@@ -216,7 +216,7 @@ body {
     }
   }
   &__title {
-    @include about__heading;
+    @extend .about__heading;
     margin: 0px $page-margin;
     @include tablet {
       padding-bottom: $padding-large;
@@ -356,18 +356,17 @@ body {
 // styling for the comment section
 .conversation {
   display: flex;
-  gap: 8px;
+  //gap: 8px;
   justify-content: space-between;
 }
 .add-comments {
-  // display: flex;
-  // flex-direction: column;
-  // flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .form {
   display: flex;
   flex-direction: column;
-  gap: $padding;
   &__name {
     width: -webkit-fill-available;
     min-height: 36px;
@@ -392,6 +391,7 @@ body {
     @include labels-and-buttons;
     color: $Mercury;
     font-weight: 400;
+    margin-top: $padding;
     &--comment {
       @extend .form__label;
     }
@@ -401,7 +401,7 @@ body {
 .primary-cta {
   @include labels-and-buttons;
   font-size: 14px;
-  margin-top: $padding;
+  margin: $padding 0;
   color: $White;
   height: 40px;
   width: 100%;
@@ -427,9 +427,8 @@ body {
 }
 .comment-item {
   display: flex;
-  justify-content: space-between;
-  gap: 8px;
-
+  justify-content: flex-start;
+  gap: $padding;
   &__title {
     display: flex;
     justify-content: space-between;

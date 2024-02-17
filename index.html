@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shows</title>
     <link rel="stylesheet" href="./styles/bio.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js" defer></script>
+    <script src="./scripts/band-site-api.js" defer></script>
+    <script src="./scripts/index-page.js" defer></script>
   </head>
   <body>
     <header>
@@ -117,17 +120,17 @@
           <div class="avatar avatar--filled"></div>
           <div class="add-comments">
             <form class="form" action="POST">
-              <label class="form__label" for="user-name">NAME</label><br />
+              <label class="form__label" for="user-name">NAME</label>
               <input
                 class="form__name"
                 type="text"
                 name=""
                 id="user-name"
                 placeholder="   Enter your name"
-              /><br />
+              />
               <label class="form__label--comment" for="user-comment"
                 >COMMENT</label
-              ><br />
+              >
               <input
                 class="form__comment"
                 type="text"
@@ -135,15 +138,12 @@
                 id="user-comment"
                 placeholder="   Add a new comment"
               />
-              <br />
             </form>
             <button class="primary-cta">COMMENT</button>
           </div>
         </div>
 
-        <div class="comment-list" id="comment-list">
-          <script src="scripts/index-page.js"></script>
-        </div>
+        <div class="comment-list" id="comment-list"></div>
       </section>
     </main>
     <footer class="footer">
