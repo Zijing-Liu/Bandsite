@@ -46,7 +46,8 @@
 
 iframe {
   @include tablet {
-    width: 144px;
+    width: 425px;
+    height: 144px;
   }
 }
 .shows {

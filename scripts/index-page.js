@@ -5,7 +5,7 @@ async function getAndDisplayComments() {
   try {
     const response = await api.getComments();
     // sort the response data based on timestamp in descending order (from most recent to the least recent)
-    const sortedComment = response.sort(
+    const sortedComment = response.data.sort(
       (obj1, obj2) => obj2.timestamp - obj1.timestamp
     );
     console.log("unsorted", response);

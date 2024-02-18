@@ -1,55 +1,28 @@
-const show1 = {
-  date: "Mon Sept 09 2024",
-  venue: "Ronald Lane",
-  location: "San Francisco, CA",
-};
+import api from "./band-site-api.js";
 
-const show2 = {
-  date: "Tue Sept 17 2024",
-  venue: "Pier 3 East",
-  location: "San Francisco, CA",
-};
-const show3 = {
-  date: "Sat Oct 12 2024",
-  venue: "View Lounge ",
-  location: "San Francisco, CA",
-};
-const show4 = {
-  date: "Sat Nov 16 2024",
-  venue: "Hyatt Agency",
-  location: "San Francisco, CA",
-};
-
-const show5 = {
-  date: "Fri Nov 29 2024",
-  venue: "Moscow Center ",
-  location: "San Francisco, CA",
-};
-const show6 = {
-  date: "Wed Dec 18 2024",
-  venue: "Press Club ",
-  location: "San Francisco, CA",
-};
-const shows = [show1, show2, show3, show4, show5, show6];
-
+async function getShowsAndDisplay() {
+  const response = await api.getShows();
+  displayShows(response.data);
+}
 function displayShows(showList) {
   console.log(showList);
   showList.forEach((show) => {
+    console.log(show);
     // get the container of the show item in html
     const showContainer = document.querySelector(".show-list");
     // get the value for each property
-    const { date, venue, location } = show;
+    const { date, place, location } = show;
     // create elements to display a show item
     const showElement = document.createElement("div");
     const dateLabel = document.createElement("p");
     dateLabel.innerText = "DATE";
     const dateContent = document.createElement("p");
-    dateContent.innerText = date;
+    dateContent.innerText = new Date(date).toDateString();
 
     const venueLabel = document.createElement("p");
     venueLabel.innerText = "VENUE";
     const venueContent = document.createElement("p");
-    venueContent.innerText = venue;
+    venueContent.innerText = place;
     const locationLabel = document.createElement("p");
     locationLabel.innerText = "LOCATION";
     const locationContent = document.createElement("p");
@@ -83,4 +56,4 @@ function displayShows(showList) {
     showContainer.appendChild(showElement);
   });
 }
-displayShows(shows);
+getShowsAndDisplay();
