@@ -93,6 +93,12 @@ header {
     padding: $padding-large;
     flex-grow: 0;
   }
+  &--selected {
+    @extend .nav-item;
+    color: $White; // apply $White color for item of hovering over
+    border-bottom: thick $White solid;
+    font-weight: 700; // font-weight for inactivate nav-item
+  }
 }
 .nav-item:hover {
   color: $White; // apply $White color for item of hovering over
@@ -102,13 +108,14 @@ header {
   font-weight: 700; // font-weight for inactivate nav-item
 }
 .hero {
-  height: 40vh;
+  height: fit-content;
   position: relative;
   background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
   background-blend-mode: multiply;
   @include desktop {
-    height: 90vh;
+    padding-left: $padding-other;
+    padding-right: $padding-other;
   }
 }
 
@@ -235,31 +242,41 @@ body {
   }
 }
 
-.footer_headings {
-  @include tablet {
-    display: flex;
-    justify-content: flex-start;
-  }
-}
-
 .footer {
   background-color: $BandSite-Black;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-bottom: $padding;
+  padding-bottom: $padding-before-headline;
 
+  @include tablet {
+    padding-left: $padding-other;
+    padding-right: $padding-other;
+    padding-bottom: $padding-before-headline-large;
+  }
+  &__headings {
+    @include tablet {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
   &__heading {
     @include section-header;
+    font-weight: 600;
     color: $White;
     text-align: left;
     margin: 0px $page-margin;
+    flex-basis: 100%;
+
     @include tablet {
       display: inline-block;
-      margin: 0px $page-margin--tablet;
+      margin-left: $page-margin--tablet;
+      margin-right: 0;
     }
     @include desktop {
-      margin: 0px $page-margin--desktop;
+      margin-left: $page-margin--desktop;
+      margin-right: 0;
     }
   }
 }
@@ -274,6 +291,7 @@ body {
   @include tablet {
     margin: 0;
     display: inline-block;
+    flex-basis: 100%;
   }
 }
 .social-icon {
@@ -286,8 +304,9 @@ body {
 .contact-list {
   padding-bottom: $padding;
   @include tablet {
+    margin-left: $page-margin--tablet;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding-bottom: $padding-large;
     margin: 0 $page-margin--tablet;
   }
@@ -300,8 +319,8 @@ body {
   width: 215px;
   padding-left: $padding;
   @include tablet {
+    flex-basis: 100%;
     padding-left: 0;
-    padding-right: $page-margin--tablet;
   }
   @include desktop {
     padding-right: $page-margin--desktop;
@@ -309,7 +328,7 @@ body {
   &__text {
     @include footer-copy;
     &--bold {
-      font-weight: 700;
+      font-weight: 600;
     }
   }
 }
@@ -317,6 +336,7 @@ body {
 .footer__logo {
   margin: 0px $page-margin;
   @include section-header;
+  font-weight: 400;
   color: $White;
   text-align: left;
   text-decoration: none;
@@ -330,14 +350,14 @@ body {
     display: none;
     @include tablet {
       display: inline-block;
-      position: absolute;
+      flex-basis: 100%;
+      text-align: right;
       padding-top: $padding-before-headline-large;
-      padding-right: 36px;
+      padding-right: $page-margin--tablet;
       color: $White;
-      right: $page-margin--tablet;
     }
     @include desktop {
-      right: $page-margin--desktop;
+      padding-right: $page-margin--desktop;
     }
   }
 }

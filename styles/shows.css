@@ -26,64 +26,77 @@
 }
 @media (min-width: 768px) {
   .hero {
+    padding: 1.5rem 0;
     height: -moz-fit-content;
     height: fit-content;
   }
 }
-.hero__body {
+@media (min-width: 1280px) {
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+.hero__text-subheader {
   font-family: "Avenir Next LT Pro";
-  font-size: 13px;
+  font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 600;
   color: #282828;
   padding-top: 16px;
-  margin: 0rem 16px;
+  margin-left: 16px;
   padding-top: 1.5rem;
   color: #ffffff;
 }
 @media (min-width: 768px) {
-  .hero__body {
-    font-size: 14px;
-    line-height: 22px;
+  .hero__text-subheader {
     padding-top: 1.5rem;
+    font-size: 24px;
+    line-height: 32px;
   }
 }
 @media (min-width: 768px) {
-  .hero__body {
-    padding-top: 3rem 0;
+  .hero__text-subheader {
+    padding-top: 3rem;
     margin: 0 2.25rem;
   }
 }
-.hero__heading {
+@media (min-width: 1280px) {
+  .hero__text-subheader {
+    padding-top: 10rem;
+    margin-left: 6rem;
+  }
+}
+.hero__text-heading {
   font-family: "Avenir Next LT Pro";
   font-size: 24px;
   line-height: 32px;
   font-weight: 700;
   color: #ffffff;
-  color: #282828;
-  padding-top: 1.5rem;
+  font-weight: 600;
   width: 60%;
   color: #ffffff;
   margin: 0rem 16px;
   padding-top: 1.5rem;
 }
 @media (min-width: 768px) {
-  .hero__heading {
+  .hero__text-heading {
     font-size: 60px;
     line-height: 68px;
   }
 }
 @media (min-width: 768px) {
-  .hero__heading {
-    padding-top: 3rem;
-    font-size: 36px;
-    line-height: 44px;
+  .hero__text-heading {
+    padding-top: 16px;
+    margin: 0 2.25rem;
   }
 }
-@media (min-width: 768px) {
-  .hero__heading {
-    padding-top: 3rem 0;
-    margin: 0 2.25rem;
+@media (min-width: 1280px) {
+  .hero__text-heading {
+    padding-top: 16px;
+    padding-bottom: 10rem;
+    margin-left: 6rem;
   }
 }
 .hero__music {
@@ -94,6 +107,12 @@
   .hero__music {
     padding: 3rem 0;
     margin: 0 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__music {
+    margin-right: 6rem;
+    padding-bottom: 10rem;
   }
 }
 
@@ -118,6 +137,7 @@
   padding-top: 1.5rem;
   font-weight: 600;
   padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 @media (min-width: 768px) {
   .shows__heading {
@@ -132,6 +152,12 @@
     line-height: 44px;
   }
 }
+@media (min-width: 768px) {
+  .shows__heading {
+    padding-top: 3rem;
+    padding-bottom: 0;
+  }
+}
 @media (min-width: 1280px) {
   .shows__heading {
     padding-top: 0;
@@ -141,7 +167,7 @@
 }
 @media (min-width: 768px) {
   .shows {
-    margin: 2.25rem;
+    margin: 0 2.25rem;
     margin-bottom: 2.25rem;
   }
 }
@@ -181,6 +207,7 @@
   color: #282828;
   padding-top: 16px;
   text-align: left;
+  padding-top: 0;
 }
 @media (min-width: 768px) {
   .show {
@@ -229,7 +256,7 @@
     height: 44px;
   }
 }
-.show__label, .show__label--persist {
+.show__label, .show__label--persist, .show__label--date {
   font-family: "Avenir Next LT Pro";
   font-size: 10px;
   line-height: 20px;
@@ -237,43 +264,49 @@
   color: #282828;
   font-weight: 600;
   color: #afafaf;
+  padding-top: 10px;
 }
 @media (min-width: 768px) {
-  .show__label, .show__label--persist {
+  .show__label, .show__label--persist, .show__label--date {
     font-size: 12px;
     line-height: 20px;
   }
 }
 @media (min-width: 768px) {
-  .show__label, .show__label--persist {
+  .show__label, .show__label--persist, .show__label--date {
     width: 20%;
     display: none;
   }
+}
+.show__label--date {
+  padding-top: 0;
 }
 @media (min-width: 768px) {
   .show__label--persist {
     display: flex;
   }
 }
-.show__content {
-  width: 20%;
+.show__content, .show__content--date {
   color: #282828;
 }
 @media (min-width: 768px) {
-  .show__content {
+  .show__content, .show__content--date {
+    width: 20%;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
   }
 }
-.show__content--bold {
-  font-weight: bold;
+.show__content--date {
+  font-weight: 600;
 }
 .show__divider {
-  border-style: inset;
-  border-width: 1px;
+  border-style: solid;
+  border-width: 0.5px;
   border-color: #e1e1e1;
-  margin-top: 16px;
+  margin: 0;
   flex-basis: 100%;
+  padding: 0;
+  margin-bottom: 16px;
 }
 @media (min-width: 768px) {
   .show__divider {

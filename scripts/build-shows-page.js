@@ -32,10 +32,10 @@ function displayShows(showList) {
     const divider = document.createElement("hr");
 
     // add classnames to each newly created element
-    dateLabel.classList.add("show__label");
+    dateLabel.classList.add("show__label--date");
     venueLabel.classList.add("show__label");
     locationLabel.classList.add("show__label");
-    dateContent.classList.add("show__content", "show__content--bold");
+    dateContent.classList.add("show__content", "show__content--date");
     venueContent.classList.add("show__content");
     locationContent.classList.add("show__content");
     cta.classList.add("primary-cta");

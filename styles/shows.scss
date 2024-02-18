@@ -11,27 +11,44 @@
   background-size: cover;
   background-blend-mode: multiply;
   @include tablet {
+    padding: $padding-large 0;
     height: fit-content;
   }
-  &__body {
-    @include body-copy;
-    margin: 0rem $page-margin;
+  @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+
+  &__text-subheader {
+    @include subheader;
+    margin-left: $page-margin;
     padding-top: $padding-before-headline;
     color: $White;
     @include tablet {
-      padding-top: $padding-before-headline-large 0;
+      padding-top: $padding-before-headline-large;
       margin: 0 $page-margin--tablet;
     }
+    @include desktop {
+      padding-top: $padding-before-headline-extra-large;
+      margin-left: $page-margin--desktop;
+    }
   }
-  &__heading {
-    @include section-header;
+  &__text-heading {
+    @include page-header;
+    font-weight: 600;
     width: 60%;
     color: $White;
     margin: 0rem $page-margin;
     padding-top: $padding-before-headline;
     @include tablet {
-      padding-top: $padding-before-headline-large 0;
+      padding-top: $padding;
       margin: 0 $page-margin--tablet;
+    }
+    @include desktop {
+      padding-top: $padding;
+      padding-bottom: $padding-before-headline-extra-large;
+      margin-left: $page-margin--desktop;
     }
   }
   &__music {
@@ -40,6 +57,10 @@
     @include tablet {
       padding: $padding-before-headline-large 0;
       margin: 0 $page-margin--tablet;
+    }
+    @include desktop {
+      margin-right: $page-margin--desktop;
+      padding-bottom: $padding-before-headline-extra-large;
     }
   }
 }
@@ -58,6 +79,11 @@ iframe {
     @include section-header;
     font-weight: 600;
     padding-top: $padding-before-headline;
+    padding-bottom: $padding-before-headline;
+    @include tablet {
+      padding-top: $padding-before-headline-large;
+      padding-bottom: 0;
+    }
     @include desktop {
       padding-top: 0;
       padding-left: $padding;
@@ -65,7 +91,7 @@ iframe {
     }
   }
   @include tablet {
-    margin: $page-margin--tablet;
+    margin: 0 $page-margin--tablet;
     margin-bottom: $page-margin--tablet;
   }
   @include desktop {
@@ -93,6 +119,7 @@ iframe {
 .show {
   @include body-copy;
   text-align: left;
+  padding-top: 0;
 
   @include tablet {
     display: flex;
@@ -130,9 +157,14 @@ iframe {
     @include labels-and-buttons;
     font-weight: 600;
     color: $Silver;
+    padding-top: 10px;
     @include tablet {
       width: 20%;
       display: none; //individual labels will be hidden
+    }
+    &--date {
+      @extend .show__label;
+      padding-top: 0;
     }
     &--persist {
       @extend .show__label;
@@ -142,22 +174,25 @@ iframe {
     }
   }
   &__content {
-    width: 20%;
     color: $BandSite-Black;
     @include tablet {
+      width: 20%;
       padding-top: $padding-large;
       padding-bottom: $padding-large;
     }
-    &--bold {
-      font-weight: bold;
+    &--date {
+      @extend .show__content;
+      font-weight: 600;
     }
   }
   &__divider {
-    border-style: inset;
-    border-width: 1px;
+    border-style: solid;
+    border-width: 0.5px;
     border-color: $Mercury;
-    margin-top: $padding;
+    margin: 0;
     flex-basis: 100%;
+    padding: 0;
+    margin-bottom: $padding;
     @include tablet {
       display: none;
     }
