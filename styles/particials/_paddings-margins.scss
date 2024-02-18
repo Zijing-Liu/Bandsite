@@ -1,12 +1,13 @@
 // global style variables
-$page-margin: 1rem;
-$padding: 1rem;
+$page-margin: 16px;
+$padding: 16px;
 $padding-before-headline: 1.5rem;
 
 // margins & paddings for desktop and tablet
-$padding-large: 24px;
+$padding-large: 1.5rem;
 $padding-before-headline-large: 3rem;
-
 $page-margin--tablet: 2.25rem;
+$page-margin--desktop: 6rem;
+$padding-other: 1.125rem;
 
-$page-margin--desktop: 82px;
+$cta-height: 40px;

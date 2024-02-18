@@ -36,8 +36,8 @@
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
-  margin: 0rem 1rem;
+  padding-top: 16px;
+  margin: 0rem 16px;
   padding-top: 1.5rem;
   color: #ffffff;
 }
@@ -45,7 +45,7 @@
   .hero__body {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -64,7 +64,7 @@
   padding-top: 1.5rem;
   width: 60%;
   color: #ffffff;
-  margin: 0rem 1rem;
+  margin: 0rem 16px;
   padding-top: 1.5rem;
 }
 @media (min-width: 768px) {
@@ -87,7 +87,7 @@
   }
 }
 .hero__music {
-  margin: 0 1rem;
+  margin: 0 16px;
   padding: 1.5rem 0;
 }
 @media (min-width: 768px) {
@@ -105,14 +105,8 @@
 }
 
 .shows {
-  margin: 0rem 1rem;
-  margin-bottom: 1rem;
-}
-@media (min-width: 768px) {
-  .shows {
-    margin: 2.25rem;
-    margin-bottom: 2.25rem;
-  }
+  margin: 0rem 16px;
+  margin-bottom: 16px;
 }
 .shows__heading {
   font-family: "Avenir Next LT Pro";
@@ -122,6 +116,7 @@
   color: #ffffff;
   color: #282828;
   padding-top: 1.5rem;
+  font-weight: 600;
   padding-top: 1.5rem;
 }
 @media (min-width: 768px) {
@@ -137,6 +132,46 @@
     line-height: 44px;
   }
 }
+@media (min-width: 1280px) {
+  .shows__heading {
+    padding-top: 0;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+@media (min-width: 768px) {
+  .shows {
+    margin: 2.25rem;
+    margin-bottom: 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    padding-top: 0rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 6rem;
+    margin-bottom: 6rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .show-table {
+    flex-grow: 1;
+  }
+}
+
+.show:hover {
+  background-color: #fafafa;
+}
+
+.show:active {
+  background-color: #e1e1e1;
+}
 
 .show {
   font-family: "Avenir Next LT Pro";
@@ -144,14 +179,14 @@
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   text-align: left;
 }
 @media (min-width: 768px) {
   .show {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -160,18 +195,38 @@
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+    border-bottom-width: 1px;
+    border-bottom-color: #e1e1e1;
+    border-bottom-style: solid;
+    padding-top: 0rem;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+}
+@media (min-width: 1280px) {
+  .show {
+    align-items: flex-end;
   }
 }
 .show__labels {
-  width: 100%;
   display: none;
 }
 @media (min-width: 768px) {
   .show__labels {
-    display: inline-flex;
-    flex-direction: row;
+    width: -webkit-fill-available;
+    height: 70px;
+    display: flex;
     justify-content: space-between;
+    align-items: baseline;
+    padding-top: 0;
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
+  }
+}
+@media (min-width: 1280px) {
+  .show__labels {
     align-items: flex-end;
+    height: 44px;
   }
 }
 .show__label, .show__label--persist {
@@ -180,7 +235,7 @@
   line-height: 20px;
   font-weight: 700;
   color: #282828;
-  font-weight: 400;
+  font-weight: 600;
   color: #afafaf;
 }
 @media (min-width: 768px) {
@@ -191,21 +246,23 @@
 }
 @media (min-width: 768px) {
   .show__label, .show__label--persist {
+    width: 20%;
     display: none;
   }
 }
 @media (min-width: 768px) {
   .show__label--persist {
-    display: inline;
-    width: 20%;
+    display: flex;
   }
 }
 .show__content {
+  width: 20%;
   color: #282828;
 }
 @media (min-width: 768px) {
   .show__content {
-    width: 20%;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
 }
 .show__content--bold {
@@ -215,8 +272,13 @@
   border-style: inset;
   border-width: 1px;
   border-color: #e1e1e1;
-  margin-top: 1rem;
+  margin-top: 16px;
   flex-basis: 100%;
+}
+@media (min-width: 768px) {
+  .show__divider {
+    display: none;
+  }
 }
 
 .primary-cta, .primary-cta--hidden {
@@ -226,7 +288,6 @@
   font-weight: 700;
   color: #282828;
   font-size: 14px;
-  margin-top: 1rem;
   color: #ffffff;
   height: 40px;
   width: 100%;
@@ -241,9 +302,17 @@
 }
 @media (min-width: 768px) {
   .primary-cta, .primary-cta--hidden {
-    max-width: 150px;
+    min-width: 200px;
+    flex-basis: 100%;
+    font-size: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
 .primary-cta--hidden {
   visibility: hidden;
+}
+
+.primary-cta:hover, .primary-cta--hidden:hover {
+  background-color: #000000;
 }/*# sourceMappingURL=shows.css.map */

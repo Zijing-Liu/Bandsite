@@ -57,7 +57,7 @@ header {
   color: #ffffff;
   text-align: center;
   width: 7.5rem;
-  padding-top: 1rem;
+  padding-top: 16px;
   text-decoration: none;
 }
 @media (min-width: 768px) {
@@ -79,13 +79,13 @@ header {
   line-height: 18px;
   font-weight: 600;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   font-weight: 400;
   color: #ffffff;
 }
 @media (min-width: 768px) {
   .nav-logo--inline {
-    padding-top: 24px;
+    padding-top: 1.5rem;
     font-size: 24px;
     line-height: 32px;
   }
@@ -96,13 +96,13 @@ header {
     width: 120px;
     text-decoration: none;
     margin-left: 2.25rem;
-    padding-bottom: 24px;
-    padding-right: 24px;
+    padding-bottom: 1.5rem;
+    padding-right: 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .nav-logo--inline {
-    margin-left: 82px;
+    margin-left: 6rem;
   }
 }
 
@@ -124,11 +124,11 @@ header {
   line-height: 18px;
   font-weight: 600;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   color: #e1e1e1;
   font-weight: 400;
   text-align: center;
-  padding-bottom: 1rem;
+  padding-bottom: 16px;
   text-decoration: none;
   flex-grow: 1;
   border: none;
@@ -137,7 +137,7 @@ header {
 }
 @media (min-width: 768px) {
   .nav-item {
-    padding-top: 24px;
+    padding-top: 1.5rem;
     font-size: 24px;
     line-height: 32px;
   }
@@ -147,7 +147,7 @@ header {
     font-size: 14px;
     line-height: 22px;
     display: inline-block;
-    padding: 24px;
+    padding: 1.5rem;
     flex-grow: 0;
   }
 }
@@ -184,7 +184,7 @@ header {
   position: absolute;
   top: 50%;
   transform: translate(0, -50%);
-  padding-left: 1rem;
+  padding-left: 16px;
 }
 @media (min-width: 768px) {
   .hero-text {
@@ -199,7 +199,7 @@ header {
 }
 @media (min-width: 1280px) {
   .hero-text {
-    padding-left: 82px;
+    padding-left: 6rem;
   }
 }
 
@@ -209,8 +209,8 @@ body {
 }
 
 .about {
-  padding-bottom: 1rem;
-  margin: 0 1rem;
+  padding-bottom: 16px;
+  margin: 0 16px;
 }
 @media (min-width: 768px) {
   .about {
@@ -219,7 +219,7 @@ body {
 }
 @media (min-width: 1280px) {
   .about {
-    margin: 0 82px;
+    margin: 0 6rem;
   }
 }
 .about__heading, .gallery__title {
@@ -248,12 +248,12 @@ body {
 @media (min-width: 768px) {
   .about__content {
     padding: 0px 2.25rem;
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .about__content {
-    padding: 0px 82px;
+    padding: 0px 6rem;
   }
 }
 .about__photo {
@@ -262,13 +262,13 @@ body {
   line-height: 18px;
   font-weight: 600;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   width: 100%;
   align-items: center;
 }
 @media (min-width: 768px) {
   .about__photo {
-    padding-top: 24px;
+    padding-top: 1.5rem;
     font-size: 24px;
     line-height: 32px;
   }
@@ -279,13 +279,13 @@ body {
   line-height: 18px;
   font-weight: 600;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   font-weight: 600;
   text-align: left;
 }
 @media (min-width: 768px) {
   .about__quotes {
-    padding-top: 24px;
+    padding-top: 1.5rem;
     font-size: 24px;
     line-height: 32px;
   }
@@ -296,14 +296,14 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   font-weight: 600;
 }
 @media (min-width: 768px) {
   .about__quotes--origin {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 .about__band-name {
@@ -312,12 +312,12 @@ body {
   line-height: 18px;
   font-weight: 600;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   padding-top: 3rem;
 }
 @media (min-width: 768px) {
   .about__band-name {
-    padding-top: 24px;
+    padding-top: 1.5rem;
     font-size: 24px;
     line-height: 32px;
   }
@@ -328,7 +328,7 @@ body {
     flex-direction: row;
     justify-content: center;
     justify-content: space-between;
-    gap: 24px;
+    gap: 1.5rem;
   }
 }
 .about__item {
@@ -337,13 +337,13 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 @media (min-width: 768px) {
   .about__item {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -361,43 +361,43 @@ body {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-bottom: 1rem;
-  margin: 0px 1rem;
+  padding-bottom: 16px;
+  margin: 0px 16px;
 }
 @media (min-width: 768px) {
   .gallery__list {
     flex-direction: row;
     -moz-column-count: 3;
          column-count: 3;
-    gap: 24px;
+    gap: 1.5rem;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
     margin: 0px 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .gallery__list {
-    margin: 0 82px;
+    margin: 0 6rem;
   }
 }
 .gallery__title {
-  margin: 0px 1rem;
+  margin: 0px 16px;
 }
 @media (min-width: 768px) {
   .gallery__title {
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
     margin: 0px 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .gallery__title {
-    margin: 0 82px;
+    margin: 0 6rem;
   }
 }
 .gallery__item {
   width: 100%;
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 @media (min-width: 768px) {
   .gallery__item {
@@ -417,7 +417,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-bottom: 1rem;
+  padding-bottom: 16px;
 }
 .footer__heading {
   font-family: "Avenir Next LT Pro";
@@ -429,7 +429,7 @@ body {
   padding-top: 1.5rem;
   color: #ffffff;
   text-align: left;
-  margin: 0px 1rem;
+  margin: 0px 16px;
 }
 @media (min-width: 768px) {
   .footer__heading {
@@ -452,7 +452,7 @@ body {
 }
 @media (min-width: 1280px) {
   .footer__heading {
-    margin: 0px 82px;
+    margin: 0px 6rem;
   }
 }
 
@@ -462,27 +462,27 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   color: #ffffff;
-  padding-top: 1rem;
-  margin: 0px 1rem;
+  padding-top: 16px;
+  margin: 0px 16px;
   display: flex;
   justify-content: flex-start;
-  gap: 1rem;
-  padding-top: 1rem;
+  gap: 16px;
+  padding-top: 16px;
 }
 @media (min-width: 768px) {
   .social {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
   .social {
     font-size: 14px;
     line-height: 20px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -498,30 +498,30 @@ body {
 }
 @media (min-width: 768px) {
   .social-icon {
-    padding-right: 24px;
+    padding-right: 1.5rem;
   }
 }
 
 .contact-list {
-  padding-bottom: 1rem;
+  padding-bottom: 16px;
 }
 @media (min-width: 768px) {
   .contact-list {
     display: flex;
     justify-content: flex-start;
-    padding-bottom: 24px;
+    padding-bottom: 1.5rem;
     margin: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .contact-list {
-    margin: 0 82px;
+    margin: 0 6rem;
   }
 }
 
 .contact {
   width: 215px;
-  padding-left: 1rem;
+  padding-left: 16px;
 }
 @media (min-width: 768px) {
   .contact {
@@ -531,7 +531,7 @@ body {
 }
 @media (min-width: 1280px) {
   .contact {
-    padding-right: 82px;
+    padding-right: 6rem;
   }
 }
 .contact__text {
@@ -540,22 +540,22 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   color: #ffffff;
-  padding-top: 1rem;
+  padding-top: 16px;
 }
 @media (min-width: 768px) {
   .contact__text {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
   .contact__text {
     font-size: 14px;
     line-height: 20px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 .contact__text--bold {
@@ -563,7 +563,7 @@ body {
 }
 
 .footer__logo {
-  margin: 0px 1rem;
+  margin: 0px 16px;
   font-family: "Avenir Next LT Pro";
   font-size: 24px;
   line-height: 32px;
@@ -599,13 +599,13 @@ body {
   line-height: 18px;
   font-weight: 600;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   font-weight: 400;
   display: none;
 }
 @media (min-width: 768px) {
   .footer__logo--upper {
-    padding-top: 24px;
+    padding-top: 1.5rem;
     font-size: 24px;
     line-height: 32px;
   }
@@ -622,34 +622,34 @@ body {
 }
 @media (min-width: 1280px) {
   .footer__logo--upper {
-    right: 82px;
+    right: 6rem;
   }
 }
 
 .copyright__text {
-  margin: 0px 1rem;
+  margin: 0px 16px;
   font-family: "Avenir Next LT Pro";
   font-size: 13px;
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
+  padding-top: 16px;
   color: #ffffff;
-  padding-top: 1rem;
+  padding-top: 16px;
   text-align: left;
 }
 @media (min-width: 768px) {
   .copyright__text {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
   .copyright__text {
     font-size: 14px;
     line-height: 20px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -659,7 +659,7 @@ body {
 }
 @media (min-width: 1280px) {
   .copyright__text {
-    margin: 0 82px;
+    margin: 0 6rem;
   }
 }
 
@@ -710,7 +710,7 @@ body {
   color: #282828;
   color: #e1e1e1;
   font-weight: 400;
-  margin-top: 1rem;
+  margin-top: 16px;
 }
 @media (min-width: 768px) {
   .form__label, .form__label--comment {
@@ -725,7 +725,7 @@ body {
   font-weight: 700;
   color: #282828;
   font-size: 14px;
-  margin: 1rem 0;
+  margin: 16px 0;
   color: #ffffff;
   height: 40px;
   width: 100%;
@@ -753,14 +753,14 @@ body {
   line-height: 18px;
   font-weight: 400;
   color: #282828;
-  padding-top: 1rem;
-  margin: 0px 1rem;
+  padding-top: 16px;
+  margin: 0px 16px;
 }
 @media (min-width: 768px) {
   .comments {
     font-size: 14px;
     line-height: 22px;
-    padding-top: 24px;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 768px) {
@@ -770,14 +770,14 @@ body {
 }
 @media (min-width: 1280px) {
   .comments {
-    margin: 0 82px;
+    margin: 0 6rem;
   }
 }
 
 .comment-item {
   display: flex;
   justify-content: flex-start;
-  gap: 1rem;
+  gap: 16px;
 }
 .comment-item__title {
   display: flex;
@@ -815,5 +815,5 @@ hr {
 .avatar--filled {
   background-image: url("../assets/Images/Mohan-muruge.jpg");
   background-size: contain;
-  margin: 1rem 1rem 1rem 0;
+  margin: 16px 16px 16px 0;
 }/*# sourceMappingURL=bio.css.map */

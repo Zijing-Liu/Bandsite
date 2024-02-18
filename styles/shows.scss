@@ -53,53 +53,100 @@ iframe {
 .shows {
   margin: 0rem $page-margin;
   margin-bottom: $page-margin;
+
+  &__heading {
+    @include section-header;
+    font-weight: 600;
+    padding-top: $padding-before-headline;
+    @include desktop {
+      padding-top: 0;
+      padding-left: $padding;
+      padding-right: $padding;
+    }
+  }
   @include tablet {
     margin: $page-margin--tablet;
     margin-bottom: $page-margin--tablet;
   }
-  &__heading {
-    @include section-header;
-    padding-top: $padding-before-headline;
+  @include desktop {
+    padding-top: 0rem;
+    height: fit-content;
+    margin: $page-margin--desktop;
+    margin-bottom: $page-margin--desktop;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: $page-margin--desktop;
   }
+}
+.show-table {
+  @include desktop {
+    flex-grow: 1;
+  }
+}
+.show:hover {
+  background-color: $Alabaster;
+}
+.show:active {
+  background-color: $Mercury;
 }
 .show {
   @include body-copy;
   text-align: left;
+
   @include tablet {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
     flex-wrap: wrap;
+    border-bottom-width: 1px;
+    border-bottom-color: $Mercury;
+    border-bottom-style: solid;
+    padding-top: 0rem;
+    padding-left: $padding-other;
+    padding-right: $padding-other;
+  }
+  @include desktop {
+    align-items: flex-end;
   }
   &__labels {
-    width: 100%;
     display: none;
     @include tablet {
-      display: inline-flex;
-      flex-direction: row;
+      width: -webkit-fill-available;
+      height: 70px;
+      display: flex;
       justify-content: space-between;
+      align-items: baseline;
+      padding-top: 0;
+      padding-left: $padding-other;
+      padding-right: $padding-other;
+    }
+    @include desktop {
       align-items: flex-end;
+      height: 44px;
     }
   }
   &__label {
     @include labels-and-buttons;
-    font-weight: 400;
+    font-weight: 600;
     color: $Silver;
     @include tablet {
+      width: 20%;
       display: none; //individual labels will be hidden
     }
     &--persist {
       @extend .show__label;
       @include tablet {
-        display: inline;
-        width: 20%;
+        display: flex;
       }
     }
   }
   &__content {
+    width: 20%;
     color: $BandSite-Black;
     @include tablet {
-      width: 20%;
+      padding-top: $padding-large;
+      padding-bottom: $padding-large;
     }
     &--bold {
       font-weight: bold;
@@ -111,23 +158,33 @@ iframe {
     border-color: $Mercury;
     margin-top: $padding;
     flex-basis: 100%;
+    @include tablet {
+      display: none;
+    }
   }
 }
 
 .primary-cta {
   @include labels-and-buttons;
   font-size: 14px;
-  margin-top: $padding;
   color: $White;
-  height: 40px;
+  height: $cta-height;
   width: 100%;
   background-color: $BandSite-Black;
   border-radius: 4px;
   @include tablet {
-    max-width: 150px;
+    min-width: 200px;
+    flex-basis: 100%;
+    font-size: 14px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
   &--hidden {
     @extend .primary-cta;
     visibility: hidden;
   }
+}
+
+.primary-cta:hover {
+  background-color: $BandSite-DarkBlack;
 }
