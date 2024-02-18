@@ -1,13 +1,16 @@
-// instantiate an object from API class
-API_KEY = "dcd88305-1253-4fba-9e18-10f10724d07e";
-const api = new BandSiteApi(API_KEY);
+import api from "./band-site-api.js";
 
 // use async function to get all comments using the BandSiteAPI
 async function getAndDisplayComments() {
   try {
     const response = await api.getComments();
-
-    response.forEach((element) => {
+    // sort the response data based on timestamp in descending order (from most recent to the least recent)
+    const sortedComment = response.sort(
+      (obj1, obj2) => obj2.timestamp - obj1.timestamp
+    );
+    console.log("unsorted", response);
+    console.log("sorted", response);
+    sortedComment.forEach((element) => {
       displayComments(element);
     });
   } catch (error) {
@@ -84,6 +87,8 @@ ctaElement.addEventListener("click", async (event) => {
       name: String(nameValue),
       comment: String(commentValue),
     };
+    console.log();
+    console.log("divider");
     const response = await api.postComment(commentNew);
     console.log(response);
   } else {

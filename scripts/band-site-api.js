@@ -1,7 +1,4 @@
 console.log("line1");
-// Create a api class
-// With methods for getting data
-
 class BandSiteApi {
   constructor(apiKey) {
     // add baseUrl to constructor
@@ -17,6 +14,8 @@ class BandSiteApi {
         `${this.baseUrl}comments/?api_key=${this.apiKey}`,
         comment
       );
+      console.log(response);
+      return response;
     } catch (error) {
       console.log(error);
     }
@@ -45,3 +44,9 @@ class BandSiteApi {
     }
   }
 }
+
+// instantiate an object from API class
+const API_KEY = "dcd88305-1253-4fba-9e18-10f10724d07e";
+const api = new BandSiteApi(API_KEY);
+
+export default api;

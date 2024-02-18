@@ -429,6 +429,7 @@ body {
   display: flex;
   justify-content: flex-start;
   gap: $padding;
+
   &__title {
     display: flex;
     justify-content: space-between;
@@ -443,6 +444,7 @@ body {
     padding-bottom: 8px;
   }
   &__rightColumn {
+    flex-grow: 1;
     margin-top: 8px;
   }
 }

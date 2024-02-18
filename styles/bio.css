@@ -793,6 +793,7 @@ body {
   padding-bottom: 8px;
 }
 .comment-item__rightColumn {
+  flex-grow: 1;
   margin-top: 8px;
 }
 
