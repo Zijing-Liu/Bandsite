@@ -14,7 +14,7 @@ class BandSiteApi {
     try {
       // send a common post to the api with the comment object as the body
       const response = await axios.post(
-        `${this.baseUrl}/comments/?api_key=${this.apiKey}`,
+        `${this.baseUrl}comments/?api_key=${this.apiKey}`,
         comment
       );
     } catch (error) {
@@ -37,7 +37,7 @@ class BandSiteApi {
   async getShows() {
     try {
       const response = await axios.get(
-        `${this.baseUrl}/showdates/?api_key=${this.apiKey}`
+        `${this.baseUrl}showdates/?api_key=${this.apiKey}`
       );
       return response;
     } catch (err) {

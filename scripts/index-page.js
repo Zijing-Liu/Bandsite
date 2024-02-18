@@ -1,12 +1,12 @@
 // instantiate an object from API class
 API_KEY = "dcd88305-1253-4fba-9e18-10f10724d07e";
 const api = new BandSiteApi(API_KEY);
-// use async function to get all comments using the BandSiteAPI
 
+// use async function to get all comments using the BandSiteAPI
 async function getAndDisplayComments() {
   try {
     const response = await api.getComments();
-    console.log(response);
+
     response.forEach((element) => {
       displayComments(element);
     });
@@ -14,8 +14,7 @@ async function getAndDisplayComments() {
     console.log(error);
   }
 }
-// invoke getAndDisplayComments() function to display comments on the page
-getAndDisplayComments();
+
 // function that takes a comment object and display its content on screen
 function displayComments(comment) {
   const commentsContainer = document.getElementById("comment-list");
@@ -63,3 +62,32 @@ function formatDate(timestamp) {
   console.log(date);
   return date;
 }
+
+// invoke getAndDisplayComments() function to display comments on the page
+getAndDisplayComments();
+
+// function to display new comment on top of existing one when a new comment is added
+const ctaElement = document.querySelector(".primary-cta");
+// when users clicks on ths submit function, check if the comment form is filled and invoke the display a comment funciton;
+ctaElement.addEventListener("click", async (event) => {
+  // prevent the bio page to reload when a new comment is added
+  event.preventDefault();
+
+  // Get the values of the input fields
+  const nameValue = document.getElementById("user-name").value;
+  const commentValue = document.getElementById("user-comment").value;
+
+  // Check if both input fields are completed
+  if (nameValue && nameValue) {
+    // If both fields are completed, post the newly added comment to the api
+    const commentNew = {
+      name: String(nameValue),
+      comment: String(commentValue),
+    };
+    const response = await api.postComment(commentNew);
+    console.log(response);
+  } else {
+    // If any field is empty, display an error message or take appropriate action
+    alert("Please fill in both fields.");
+  }
+});
