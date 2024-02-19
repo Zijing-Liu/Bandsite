@@ -201,7 +201,7 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-bottom-width: 1px;
     border-bottom-color: #e1e1e1;
     border-bottom-style: solid;
@@ -294,32 +294,11 @@
   }
 }
 
-.primary-cta, .primary-cta--hidden {
-  font-family: "Avenir Next LT Pro";
-  font-size: 10px;
-  line-height: 20px;
-  font-weight: 700;
-  color: #282828;
-  font-size: 14px;
-  color: #ffffff;
-  height: 40px;
-  width: 100%;
-  background-color: #282828;
-  border-radius: 4px;
-}
 @media (min-width: 768px) {
   .primary-cta, .primary-cta--hidden {
-    font-size: 12px;
-    line-height: 20px;
-  }
-}
-@media (min-width: 768px) {
-  .primary-cta, .primary-cta--hidden {
-    min-width: 200px;
-    flex-basis: 100%;
+    margin-left: 0;
+    width: 150px;
     font-size: 14px;
-    padding-left: 32px;
-    padding-right: 32px;
   }
 }
 .primary-cta--hidden {

@@ -666,6 +666,7 @@ body {
 }
 @media (min-width: 768px) {
   .footer__logo--upper {
+    font-weight: 400;
     display: inline-block;
     flex-basis: 100%;
     text-align: right;
@@ -676,6 +677,7 @@ body {
 }
 @media (min-width: 1280px) {
   .footer__logo--upper {
+    font-weight: 400;
     padding-right: 6rem;
   }
 }
@@ -734,10 +736,13 @@ body {
 }
 .form__name {
   width: -webkit-fill-available;
+  background-color: #fafafa;
   min-height: 36px;
+  padding-left: 16px;
   border-radius: 4px;
   border-color: #e1e1e1;
   border-style: solid;
+  padding-left: 8px;
 }
 @media (min-width: 768px) {
   .form__name {
@@ -745,11 +750,16 @@ body {
   }
 }
 .form__comment {
+  position: relative;
   width: -webkit-fill-available;
-  min-height: 36px;
+  background-color: #fafafa;
+  padding-left: 16px;
+  padding-bottom: 3rem;
   border-radius: 4px;
   border-color: #e1e1e1;
   border-style: solid;
+  padding-left: 8px;
+  margin-top: 0px;
 }
 @media (min-width: 768px) {
   .form__comment {
@@ -763,7 +773,7 @@ body {
   font-weight: 700;
   color: #282828;
   color: #e1e1e1;
-  font-weight: 400;
+  font-weight: 600;
   margin-top: 16px;
 }
 @media (min-width: 768px) {
@@ -772,12 +782,17 @@ body {
     line-height: 20px;
   }
 }
+.form__label--comment {
+  align-items: flex-start;
+}
+
 .primary-cta, .primary-cta--hidden {
   font-family: "Avenir Next LT Pro";
   font-size: 10px;
   line-height: 20px;
   font-weight: 700;
   color: #282828;
+  padding: 0;
   font-size: 14px;
   margin: 16px 0;
   color: #ffffff;
@@ -785,6 +800,7 @@ body {
   width: 100%;
   background-color: #282828;
   border-radius: 4px;
+  font-weight: 600;
 }
 @media (min-width: 768px) {
   .primary-cta, .primary-cta--hidden {
@@ -794,9 +810,10 @@ body {
 }
 @media (min-width: 768px) {
   .primary-cta, .primary-cta--hidden {
-    max-width: 150px;
     position: relative;
     margin-left: auto;
+    font-size: 14px;
+    width: 150px;
   }
 }
 .primary-cta--hidden {
@@ -848,7 +865,11 @@ body {
 
 @media (min-width: 768px) {
   .comments-content {
-    padding: 0 3rem;
+    padding: 0 5rem;
+  }
+}
+@media (min-width: 1280px) {
+  .comments-content {
     width: 45%;
     position: relative;
     margin: auto;
@@ -896,4 +917,11 @@ hr {
   background-image: url("../assets/Images/Mohan-muruge.jpg");
   background-size: contain;
   margin: 16px 16px 16px 0;
+}
+@media (min-width: 768px) {
+  .avatar {
+    width: 48px;
+    height: 48px;
+    margin-top: 36px;
+  }
 }/*# sourceMappingURL=bio.css.map */
