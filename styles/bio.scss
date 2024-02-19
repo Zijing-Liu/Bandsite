@@ -17,7 +17,6 @@ a {
 }
 // header
 header {
-  // position: fixed; // how to make the header fixed while not exceed
   margin: 0;
   background-color: $BandSite-Black;
   width: 100vw;
@@ -30,8 +29,11 @@ header {
     flex-direction: row;
     justify-self: flex-start;
     align-items: baseline;
+    padding-left: $padding-other;
+    padding-right: $padding-other;
   }
 }
+
 .nav-logo {
   @include page-header;
   font-weight: 400;
@@ -69,7 +71,7 @@ header {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: baseline;
   @include tablet {
     justify-content: flex-start;
   }
@@ -87,16 +89,19 @@ header {
   cursor: pointer;
   transition: color 0.3s ease;
   @include tablet {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 22px;
     display: inline-block;
     padding: $padding-large;
     flex-grow: 0;
   }
+  @include desktop {
+    padding: $padding-before-headline;
+  }
   &--selected {
     @extend .nav-item;
     color: $White; // apply $White color for item of hovering over
-    border-bottom: thick $White solid;
+    border-bottom: thick $White inset;
     font-weight: 700; // font-weight for inactivate nav-item
   }
 }
@@ -107,33 +112,46 @@ header {
 .nav-item:active {
   font-weight: 700; // font-weight for inactivate nav-item
 }
+
 .hero {
-  height: fit-content;
+  width: 100vw;
+  height: 45vh;
   position: relative;
   background: url("/assets/Images/hero-bio.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
   background-blend-mode: multiply;
-  @include desktop {
-    padding-left: $padding-other;
-    padding-right: $padding-other;
-  }
-}
 
-.hero-text {
-  @include page-header;
-  color: white;
-  position: absolute;
-  top: 50%;
-  transform: translate(0, -50%);
-  padding-left: $page-margin;
   @include tablet {
-    padding-left: $page-margin--tablet;
+    height: 65vh;
+    padding: $padding-large 0;
   }
   @include desktop {
-    padding-left: $page-margin--desktop;
+    height: 90vh;
+  }
+  &__content {
+    @include page-header;
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    @include tablet {
+      margin: 0 $padding-other;
+    }
+    @include desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+  &__text {
+    @include tablet {
+      padding: 0 $page-margin--tablet;
+    }
+    @include desktop {
+      padding: 0 $page-margin--desktop;
+    }
   }
 }
-
 body {
   margin: 0;
   padding: 0;
@@ -150,6 +168,7 @@ body {
 
   &__heading {
     @include section-header;
+    font-weight: 600;
     text-align: left;
   }
   &__content {
@@ -157,8 +176,11 @@ body {
       padding: 0px $page-margin--tablet;
       padding-bottom: $padding-large;
     }
+    @include tablet {
+      padding: 0 $padding-before-headline-large;
+    }
     @include desktop {
-      padding: 0px $page-margin--desktop;
+      padding: 0 $page-margin--desktop;
     }
   }
   &__photo {
@@ -247,12 +269,15 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding-bottom: $padding-before-headline;
+  padding-bottom: $padding;
 
   @include tablet {
     padding-left: $padding-other;
     padding-right: $padding-other;
     padding-bottom: $padding-before-headline-large;
+  }
+  @include desktop {
+    padding-bottom: $padding-before-headline-extra-large;
   }
   &__headings {
     @include tablet {
@@ -429,6 +454,8 @@ body {
   border-radius: 4px;
   @include tablet {
     max-width: 150px;
+    position: relative;
+    margin-left: auto;
   }
   &--hidden {
     @extend .primary-cta;
@@ -438,13 +465,37 @@ body {
 .comments {
   @include body-copy;
   margin: 0px $page-margin;
+  padding-top: 0;
+  padding-bottom: $padding;
   @include tablet {
+    padding-top: 0;
     margin: 0px $page-margin--tablet;
+    padding-bottom: $padding-large;
   }
   @include desktop {
+    padding-top: 0;
     margin: 0 $page-margin--desktop;
+    padding-bottom: $padding-before-headline-large;
+  }
+  &__heading {
+    @extend .about__heading;
+    @include tablet {
+      padding-bottom: $padding-before-headline;
+    }
+    @include desktop {
+      padding-bottom: $padding-before-headline-large;
+    }
   }
 }
+.comments-content {
+  @include tablet {
+    padding: 0 $padding-before-headline-large;
+    width: 45%;
+    position: relative;
+    margin: auto;
+  }
+}
+
 .comment-item {
   display: flex;
   justify-content: flex-start;
@@ -472,8 +523,7 @@ body {
 hr {
   width: 100%;
   color: $Mercury;
-  stroke: $Mercury;
-  stroke-width: 1px;
+  stroke-width: 0.5px;
 }
 
 .avatar {

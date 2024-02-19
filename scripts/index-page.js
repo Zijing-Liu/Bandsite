@@ -55,8 +55,8 @@ function displayComments(comment) {
   titleElement.appendChild(nameElement);
   titleElement.appendChild(timestampElement);
 
-  commentsContainer.appendChild(document.createElement("hr"));
   commentsContainer.appendChild(commentElement);
+  commentsContainer.appendChild(document.createElement("hr"));
 }
 
 //helper function to formateDate timestamp to MM/DD/YY
@@ -87,8 +87,6 @@ ctaElement.addEventListener("click", async (event) => {
       name: String(nameValue),
       comment: String(commentValue),
     };
-    console.log();
-    console.log("divider");
     const response = await api.postComment(commentNew);
     console.log(response);
   } else {

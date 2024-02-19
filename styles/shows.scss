@@ -5,20 +5,9 @@
 @use "./particials/typography.scss" as *;
 
 .hero {
-  height: fit-content;
-  position: relative;
   background: url("../assets/Images/hero-shows.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
   background-blend-mode: multiply;
-  @include tablet {
-    padding: $padding-large 0;
-    height: fit-content;
-  }
-  @include desktop {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
 
   &__text-subheader {
     @include subheader;
@@ -26,11 +15,11 @@
     padding-top: $padding-before-headline;
     color: $White;
     @include tablet {
-      padding-top: $padding-before-headline-large;
       margin: 0 $page-margin--tablet;
+      padding-top: $padding-large;
     }
     @include desktop {
-      padding-top: $padding-before-headline-extra-large;
+      padding-top: $padding-before-headline;
       margin-left: $page-margin--desktop;
     }
   }
@@ -42,12 +31,10 @@
     margin: 0rem $page-margin;
     padding-top: $padding-before-headline;
     @include tablet {
-      padding-top: $padding;
       margin: 0 $page-margin--tablet;
+      padding-bottom: $padding-before-headline;
     }
     @include desktop {
-      padding-top: $padding;
-      padding-bottom: $padding-before-headline-extra-large;
       margin-left: $page-margin--desktop;
     }
   }
@@ -55,12 +42,10 @@
     margin: 0 $page-margin;
     padding: $padding-before-headline 0;
     @include tablet {
-      padding: $padding-before-headline-large 0;
       margin: 0 $page-margin--tablet;
     }
     @include desktop {
       margin-right: $page-margin--desktop;
-      padding-bottom: $padding-before-headline-extra-large;
     }
   }
 }
@@ -74,13 +59,27 @@ iframe {
 .shows {
   margin: 0rem $page-margin;
   margin-bottom: $page-margin;
-
+  @include tablet {
+    padding: $padding-before-headline 0;
+    margin: 0 $page-margin--tablet;
+  }
+  @include desktop {
+    padding: $padding-before-headline-large 0;
+    margin: 0 $page-margin--desktop;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: $page-margin--desktop;
+  }
   &__heading {
     @include section-header;
     font-weight: 600;
     padding-top: $padding-before-headline;
     padding-bottom: $padding-before-headline;
     @include tablet {
+      padding-left: $padding-other;
+      padding-right: $padding-other;
       padding-top: $padding-before-headline-large;
       padding-bottom: 0;
     }
@@ -89,20 +88,6 @@ iframe {
       padding-left: $padding;
       padding-right: $padding;
     }
-  }
-  @include tablet {
-    margin: 0 $page-margin--tablet;
-    margin-bottom: $page-margin--tablet;
-  }
-  @include desktop {
-    padding-top: 0rem;
-    height: fit-content;
-    margin: $page-margin--desktop;
-    margin-bottom: $page-margin--desktop;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: $page-margin--desktop;
   }
 }
 .show-table {

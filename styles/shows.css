@@ -17,26 +17,9 @@
   font-style: normal;
 } 
 .hero {
-  height: -moz-fit-content;
-  height: fit-content;
-  position: relative;
   background: url("../assets/Images/hero-shows.jpg") rgba(40, 40, 40, 0.5);
   background-size: cover;
   background-blend-mode: multiply;
-}
-@media (min-width: 768px) {
-  .hero {
-    padding: 1.5rem 0;
-    height: -moz-fit-content;
-    height: fit-content;
-  }
-}
-@media (min-width: 1280px) {
-  .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-  }
 }
 .hero__text-subheader {
   font-family: "Avenir Next LT Pro";
@@ -58,13 +41,13 @@
 }
 @media (min-width: 768px) {
   .hero__text-subheader {
-    padding-top: 3rem;
     margin: 0 2.25rem;
+    padding-top: 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .hero__text-subheader {
-    padding-top: 10rem;
+    padding-top: 1.5rem;
     margin-left: 6rem;
   }
 }
@@ -88,14 +71,12 @@
 }
 @media (min-width: 768px) {
   .hero__text-heading {
-    padding-top: 16px;
     margin: 0 2.25rem;
+    padding-bottom: 1.5rem;
   }
 }
 @media (min-width: 1280px) {
   .hero__text-heading {
-    padding-top: 16px;
-    padding-bottom: 10rem;
     margin-left: 6rem;
   }
 }
@@ -105,14 +86,12 @@
 }
 @media (min-width: 768px) {
   .hero__music {
-    padding: 3rem 0;
     margin: 0 2.25rem;
   }
 }
 @media (min-width: 1280px) {
   .hero__music {
     margin-right: 6rem;
-    padding-bottom: 10rem;
   }
 }
 
@@ -126,6 +105,24 @@
 .shows {
   margin: 0rem 16px;
   margin-bottom: 16px;
+}
+@media (min-width: 768px) {
+  .shows {
+    padding: 1.5rem 0;
+    margin: 0 2.25rem;
+  }
+}
+@media (min-width: 1280px) {
+  .shows {
+    padding: 3rem 0;
+    margin: 0 6rem;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 6rem;
+  }
 }
 .shows__heading {
   font-family: "Avenir Next LT Pro";
@@ -154,6 +151,8 @@
 }
 @media (min-width: 768px) {
   .shows__heading {
+    padding-left: 1.125rem;
+    padding-right: 1.125rem;
     padding-top: 3rem;
     padding-bottom: 0;
   }
@@ -163,25 +162,6 @@
     padding-top: 0;
     padding-left: 16px;
     padding-right: 16px;
-  }
-}
-@media (min-width: 768px) {
-  .shows {
-    margin: 0 2.25rem;
-    margin-bottom: 2.25rem;
-  }
-}
-@media (min-width: 1280px) {
-  .shows {
-    padding-top: 0rem;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin: 6rem;
-    margin-bottom: 6rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 6rem;
   }
 }
 
